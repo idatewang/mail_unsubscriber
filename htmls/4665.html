@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>@font-face {
+font-family: 'Open Sans'; font-style: normal; font-weight: 400; font-stretch: normal; font-display: swap; src: url('https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Open Sans'; font-style: normal; font-weight: 600; font-stretch: normal; font-display: swap; src: url('https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Open Sans'; font-style: normal; font-weight: 700; font-stretch: normal; font-display: swap; src: url('https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlEA.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Poppins'; font-style: normal; font-weight: 800; font-display: swap; src: url('https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDD4Z1xlEA.ttf') format('truetype');
+}
+img {
+border: 0; height: auto; outline: none; text-decoration: none;
+}
+body {
+height: 100% !important; margin: 0 auto !important; padding: 0; width: 100% !important;
+}
+img {
+-ms-interpolation-mode: bicubic;
+}
+.ReadMsgBody {
+width: 100%;
+}
+.ExternalClass {
+width: 100%;
+}
+body {
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+.ExternalClass {
+line-height: 100%;
+}
+.cta-dark:hover {
+background-color: #2B1D67 !important; text-decoration: none !important;
+}
+.cta-red:hover {
+background-color: #D83939 !important; text-decoration: none !important;
+}
+.cta-white:hover {
+background-color: #E2E2E6 !important; text-decoration: none !important;
+}
+.cta-dark-center:hover {
+background-color: #2B1D67 !important; text-decoration: none !important;
+}
+.cta-red-center:hover {
+background-color: #D83939 !important; text-decoration: none !important;
+}
+.cta-white-center:hover {
+background-color: #E2E2E6 !important; text-decoration: none !important;
+}
+@media screen and (max-width:480px) {
+  u ~ div .full-wrap {
+    min-width: 100vw;
+  }
+  div > u ~ div .full-wrap {
+    min-width: 100%;
+  }
+  .center {
+    margin: 0 auto !important;
+  }
+  .cta-dark-center {
+    margin: 0 auto !important;
+  }
+  .cta-red-center {
+    margin: 0 auto !important;
+  }
+  .cta-white-center {
+    margin: 0 auto !important;
+  }
+  .h110px {
+    height: 110px !important;
+  }
+  .h157 {
+    height: 157px !important; vertical-align: middle !important;
+  }
+  .h-auto {
+    height: auto !important;
+  }
+  .hero {
+    content: url(https://braze-images.com/appboy/communication/assets/image_assets/images/6310dc6986191121b7763eef/original.jpg?1662049385) !important; border-radius: 4px !important; width: 100% !important; max-width: 480px !important;
+  }
+  .fnt13 {
+    font-size: 13px !important; line-height: 19px !important;
+  }
+  .fnt14 {
+    font-size: 14px !important; line-height: 20px !important;
+  }
+  .fnt32 {
+    font-size: 32px !important; line-height: 40px !important;
+  }
+  .logo {
+    width: 100px !important;
+  }
+  .mbl-cntr {
+    float: none !important; margin: 0 auto !important; text-align: center !important;
+  }
+  .mblhide {
+    display: none !important;
+  }
+  .mblshow {
+    display: block !important;
+  }
+  .mw88 {
+    max-width: 88% !important;
+  }
+  .mw100 {
+    max-width: 100% !important;
+  }
+  .mw150px {
+    max-width: 150px !important;
+  }
+  .pd0 {
+    padding-top: 0 !important;
+  }
+  .pt16 {
+    padding-top: 16px !important;
+  }
+  .pt24 {
+    padding-top: 24px !important;
+  }
+  .pt32 {
+    padding-top: 32px !important;
+  }
+  .w25 {
+    width: 25% !important;
+  }
+  .w84 {
+    width: 84% !important;
+  }
+  .w90 {
+    width: 90% !important;
+  }
+  .w96 {
+    width: 96% !important;
+  }
+  .w100 {
+    width: 100% !important;
+  }
+  .w110px {
+    width: 110px !important;
+  }
+  .w270px {
+    width: 270px !important;
+  }
+  .txt-cntr {
+    text-align: center !important;
+  }
+}
+</style>
+</head>
+<body style="height: 100% !important; width: 100% !important; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0 auto; padding: 0;">
+<p style="mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!--[if !mso]><!-->
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="x-apple-disable-message-reformatting">
+<!--<![endif]-->
+<title></title>
+ 
+
+
+<!--[if mso]><style type="text/css">body, table, td, a, p, span, ul, li {font-family: Arial, sans-serif!important;}</style><![endif]-->
+
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+
+
+<div id="wrapper" style="background-color: #FFFFFF; position: relative; margin: 0 auto;" class="full-wrap">
+
+    <!--preheader-->
+    <div style="display: none; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+<p style="font-family: Helvetica, Arial, sans-serif; font-size: 1px; line-height: 1px; color: #ffffff; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">Plus, get your home in game shape 💪</p>
+    </div>
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+    &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+    </div>
+    <!--/preheader-->
+    
+<!--[if (gte mso 9)|(IE)]><table align="center" cellpadding="0" cellspacing="0" border="0" style="width:620px;"><tr><td align="center" bgcolor"#ffffff"><![endif]-->
+
+    <!--module 1a: logo-->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="left" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding: 24px 0;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 90%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="left" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            <a href="https://clicks.yelp.com/uni/ls/click?upn=G7Qj1IRHFewGDXeOuVajbmutTuH6SrFnQ0S-2B2WL4Ej0vNA0nueqHFE5Rd85R9HMWxd-2FdHCWgqJdc2CihlwdgZp5C9HaU6B36gRMutTNQ4fcOJFMYTlQ7RwZ7eJ5bY2PbRLqupq2A1gK3tJz3s3e8dRdFlhzvBO71zqvG3d-2F6IUjCxC3SZYw6D2t53kQQdcLlpG8QwEV7IPsgTj1jlSyzqfHM33BDhjx9Kuz1jnU-2BLGPA-2FciyJZFy0zdMdeIFMp38pKfy-2BJ0giCUHHldQnmOLqw-3D-3D7Oc9_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZyguVcbm2y2SPus6IhPn3NUqSVx2qkBDBRaWVFVeqw8M0BhUlFODkR63KK0lZuE57AqfFIHggeOlpsrnDtbqjzk8pDDaWED-2FGdaSGJq59JUTNSVIG9PjiDlco9VgO7NGUtvOXYoA2DWTARMzs7a4yK8-3D" universal="true" style="text-orientation: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"> <img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60ef15d065dbd54d4602ff58/original.png?1626281424" alt="Yelp Logo" width="87" style="display: block; outline: 0; width: 87px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;" class="logo"></a>
+        </td>
+        </tr>
+        </table>
+    </td>
+	</tr>
+	</table>
+    <!--/module 1a: logo-->
+
+    <!--module 2: hero-->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="center" style="padding-bottom: 32px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <a href="https://clicks.yelp.com/uni/ls/click?upn=G7Qj1IRHFewGDXeOuVajbn7r2mYgsAh4UYkchiFbsW4u5kSyFtsm-2FItA3KPEYmokez3CvDtNVR2FHVYlNWwgEZr6A06xmm8WXojcZGs-2BTqGmXfTir-2FvY9U1am9sVFKO-2BqY5wX8Il2Mfj2Tks4hMxS4mvSsrY-2BY90-2FcQdpK-2FSipfhPdIjslGekEfQ0uENt5XpMDdHgvbN8dNE3yzbfUyXW9DHrAE7FmkW2p4f7-2FTaeIHYNez6wmtMtXCKcklC4l3PZID7bsnigRlNCksn-2FVadCbCmu5ITKbmKpGIttSfetaz-2FqZxKcZknbWOFEKAZTV5rKxC3_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ35cRL1o3ztnmr6p4NnU-2FHa16LOgUX032rcICfH9u01hQdtmKCMgqUN1juVz7bEbAdLNT4dovkF7-2FNMRy-2B-2Bk6m2kH9bajr1swfamzB-2FEm38jPxjTyqIWKCMFOynsoUEgxl8WmJTuId0Fv9EyJ4PQqXE-3D" universal="true" style="text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"><img src="https://braze-images.com/appboy/communication/assets/image_assets/images/6310dc69bae5f32544dbc2f4/original.jpg?1662049385" alt="sports bar" width="620" style="border-radius: 4px; display: block; outline: 0; width: 100%; max-width: 620px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;" class="hero"></a>
+    </td>
+    </tr>
+    </table>
+    <!--/module 2: hero-->
+
+    <!--module 3a: headline and copy specs-->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="left" style="padding-bottom: 32px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 90%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="left" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            <p style="color: #2B273C; font-family: Poppins,'Arial Black',Arial,sans-serif; font-size: 48px; font-weight: 800; line-height: 58px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;" class="fnt32" align="left">Hut hut, it’s football season</p>
+            <p style="color: #2B273C; font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-size: 16px; font-weight: normal; line-height: 24px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 16px 0 0; padding: 0;" align="left">Pumped for kickoff? Then forget the couch. Get hyped with your buddies at one of these <a href="https://clicks.yelp.com/uni/ls/click?upn=G7Qj1IRHFewGDXeOuVajbn7r2mYgsAh4UYkchiFbsW4u5kSyFtsm-2FItA3KPEYmokez3CvDtNVR2FHVYlNWwgEZr6A06xmm8WXojcZGs-2BTqGmXfTir-2FvY9U1am9sVFKO-2BqY5wX8Il2Mfj2Tks4hMxS4mvSsrY-2BY90-2FcQdpK-2FSipfhPdIjslGekEfQ0uENt5XpMDdHgvbN8dNE3yzbfUyXW9DHrAE7FmkW2p4f7-2FTaeIHYNez6wmtMtXCKcklC4l3PZID7bsnigRlNCksn-2FVadCbCmu5ITKbmKpGIttSfetaz-2FqZxKcZknbWOFEKAZTV5rYqVK_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ72N-2FKoExZcaqBWuKV7DxtMpvn7Vnf0z-2Fx0hGLEKzpGDL1osDlRMORIP-2FYphlqfH6jZF9PcvONfXg9kFvgPhcvyasfIEcVybwZQwM9W4QP-2B4YP2V2RohzuO-2Fp8PX9wbZiUaaAXsJ7stKlX4KlWMl6HA-3D" universal="true" style="color: #00838F; font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">local sports bars</a> and fuel up on wings, fries, and beer galore. It's official — you’ll raise the bar with this collection.</p>
+        </td>
+        </tr>
+        <tr>
+        
+		</tr>
+		<tr>
+		</tr>
+        </table>
+    </td>
+	</tr>
+	</table>
+    <!--/module 3a: headline and copy specs-->
+
+   <!--module 6a: primary ctas-->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="center" style="padding-bottom: 10px; padding-top: 10px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 90%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate; border-radius: 4px; width: 238px; transition: all .6s ease; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" class="cta-red" bgcolor="#F03939">
+            <tr>
+            <td height="48" valign="middle" style="height: 48px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" align="center">
+            <a href="https://clicks.yelp.com/uni/ls/click?upn=G7Qj1IRHFewGDXeOuVajbn7r2mYgsAh4UYkchiFbsW4u5kSyFtsm-2FItA3KPEYmokez3CvDtNVR2FHVYlNWwgEZr6A06xmm8WXojcZGs-2BTqGmXfTir-2FvY9U1am9sVFKO-2BqY5wX8Il2Mfj2Tks4hMxS4mvSsrY-2BY90-2FcQdpK-2FSipfhPdIjslGekEfQ0uENt5XpMDdHgvbN8dNE3yzbfUyXW9DHrAE7FmkW2p4f7-2FTaeIHYNez6wmtMtXCKcklC4l3PZID7bsnigRlNCksn-2FVadCbCmu5ITKbmKpGIttSfetaz-2FqZxKcZknbWOFEKAZTV5rNUQ__2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ-2B7tNENUxNDT69-2BxFdbulfwXAFtz-2FcIHij-2FUHDWC7V1SGu8X3WcBvceVhwFFPeAS4mjf8caqftlP5WYtJUj67heaMKgrAerVR5F2McRcPmmaX9yfpRXZFdF3NK3qMQQmn4XajppgVpydGziqzGJG6qM-3D" universal="true" style="display: inline-block; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #ffffff; text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding: 10px 30px;"><!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->See Collection<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]--></a>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+            
+        </table>
+    </td>
+	</tr>
+        <td align="center" style="padding-top: 40px; padding-bottom: 15px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+	        <tr>
+	        <td align="center" style="border-top-width: 1px; border-top-color: #dcdfe5; border-top-style: solid; line-height: 0; font-size: 0; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">&nbsp;</td>
+			</tr>
+			</table>
+		</td>
+	</table>
+
+    <!--/module 6: primary ctas-->
+
+
+
+  <!--module 10e: image + copy - stack in mobile (image on top)-->
+	<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+	<tr>
+	<td align="center" style="padding-top: 15px; padding-bottom: 5px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+		<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 90%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" class="txt.cntr">
+		<!--html option-->
+        <tr>
+		<td style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+			<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius: 20px; border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" bgcolor="#00838f">
+	        <tr>
+			<td style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding: 5px 10px;">
+				<p style="color: #ffffff; font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-size: 14px; font-weight: bold; line-height: 22px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;" align="center">This week’s home tip</p>
+			</td>
+			</tr>
+			</table>
+		</td>
+		</tr>
+
+		<!--image option-->
+		<tr>
+		<td style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+		</td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+    <tr>
+	</tr>
+	</table>
+	<!--/module 10e: image + copy - stack in mobile (image on top)-->
+    
+    <!--module 3a: headline and copy specs-->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="left" style="padding-bottom: 22px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 90%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="left" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            <p style="color: #2B273C; font-family: Poppins,'Arial Black',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 26px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 12px 0 0; padding: 0;" class="fnt32" align="left">It’s also home improvement season</p>
+            <p style="color: #2B273C; font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-size: 16px; font-weight: normal; line-height: 24px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 16px 0 0; padding: 0;" align="left">Did you know you can fix a wobbly chair with a glue gun? Whether you’re in a house or apartment, homes always need repair. Luckily, we’ve got <a href="https://clicks.yelp.com/ls/click?upn=G7Qj1IRHFewGDXeOuVajbmP-2BzjARCWXs6QfDkkwUO0yqElEACA2P9zmWzNkcJPFTA70jhp3h4aUy7NMzRtsvGp-2FmF-2FdPJ12wZRQF8fKVXDgOT-2FrD7u-2FUAeCguDo9dAhYeU6rtiWu-2FSTjQk1TFQI4rcFepMXkoZQHOeECF5A1Lqd4rPx0bPwbtnGXLgi6v2w4ia2OETBZ6-2FbZcWSU0-2FhrxpkQDDsa4jQSOAQko29q23-2F2UtJ7vFi915ItuFUnkT2JK-2FfTXQHltnoHC7Yr1AiDXMwA90PEjK5nu6ONu-2Bg8aDX-2BawB-2BGPXYWkQhS4Tl6mIXDkiQ_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ0SlWgp3k4XnEHojfsI-2FAHppAFutAxg2IhEq94PoyLmft24aT9KUi2GnfSsQq8hAit0s4W00FGT-2F2ervTm18RXwyjjBSgF8r2GF5cP7msfbTmq3G-2F9sQ89pcg8EqptEyVsCqrM6FjRWK2ZNJYk9MiYA-3D" style="color: #00838F; font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">11 DIY fixes</a>. For everything else, find a local handyman.</p>
+        </td>
+        </tr>
+        </table>
+    </td>
+	</tr>
+	</table>
+    <!--/module 3a: headline and copy specs-->
+    
+    <!--module 6a: primary ctas-->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="center" style="padding-bottom: 30px; padding-top: 20px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 90%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate; border-radius: 4px; width: 250px; transition: all .6s ease; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" class="cta-dark" bgcolor="#2B273C">
+            <tr>
+            <td height="48" valign="middle" style="height: 48px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" align="center">
+            <a href="https://clicks.yelp.com/uni/ls/click?upn=G7Qj1IRHFewGDXeOuVajbsfBsqBbxkCHt6aqkrxdGtTDq-2FeO-2BoS-2BW9NRqkT46NHMz9nhKCSjBgrIwtODENPjO4W-2FRoiE49vO913mlOJPJhgAvFIbJUpGUiAcEegMVUpvmw2ZpwWErXTK6dyyRDWn071JeuIk0E5JxRX8CflTSjiPa2S1ZSkqW6nCUCXSaVW630cGxJpjxIhAIa7YYqP-2Bwacm2sgnp87PRtakaaqx5RYZksBwlhmFxiY-2Bkwd-2FeDK9mGhnORtO43L5H-2FREzk-2BEAKFrsQisADfQBGl5XgSJ6CvSHMCxCLFsY5oYzUd46s6uEji1NDSwo4V3hqDPQ5d-2Bdg-3D-3DXXCu_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ77d7r-2FVrXTgrCvt-2F-2BU07kHDHRvX0OnDV6NZ9b3x4QKaKDq1akeUow5ynQhqgzTAvhvyWD1mJXi5dFznqXejUVZcd2ddAmf-2Fu01aECikM3QiWqh8mv6rtG64oKU1FLfAYz38VHvAMQl3PqM2iAvUwTY-3D" universal="true" style="display: inline-block; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #ffffff; text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding: 10px 30px;"><!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->Find handyman<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]--></a>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        </table>
+    </td>
+	</tr>
+	</table>
+    <!--/module 6: primary ctas-->
+        
+        
+    
+<!-- module 16: divider-->
+	<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding: 40px 0;">
+		<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="center" style="border-top-width: 1px; border-top-color: #dcdfe5; border-top-style: solid; line-height: 0; font-size: 0; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">&nbsp;</td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+	</table>
+	<!--/module 16: divider-->     
+    
+<!--module: sponsor module - left aligned -->
+	<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="center" style="padding-bottom: 45px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    	<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 90%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="center" style="font-size: 0; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        	<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:558px;">
+			<tr>
+			<td valign="top" style="width:120px;">
+			<![endif]-->
+			<div style="display: inline-block; width: 100%; max-width: 120px;" class="mw100">
+        	<table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        	<div style="mso-hide: all; display: none;" class="mblshow">
+        	</div>
+	        <tr>
+	        <td align="left" style="padding-top: 15px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+		        <a href="https://clicks.yelp.com/uni/ls/click?upn=G7Qj1IRHFewGDXeOuVajbg6qFc5nAeqog3IIFm03yOPXfHnJDjTnw0VLeredRfweoVKr3YnNlZ78WIKK3dmwZMKuw89eVfD8aW1Rt7sfgUh8jYmGVShkc8sTv-2F0kdDIiNnwtDt2g3ZItumeT5ZHNo9wzJvcny9RcMppxe-2F6YUCfRisL9aMMc-2BqF393xHBAj-2FijNfxnEkPL7T1rUy5M52zFYdp6at5q-2FSmd-2FDWzHRQrJl0q1hB7rKmDyWa-2B7YYF1ubjdNEiRh8uhYoN6B4FkZoZneE8j90os9KzmpIKyyTCx2VbdBlZKpLVUFdYQPZhFC6v0addgHUY-2Fpk0ta-2BChTPg-3D-3DKXJa_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ2JOtAUyuYoK-2BtM7zkMvCRmzyds-2BUxmMmuPBcF91p2spUhjlMzhQzNFpV2MrYB9i5giFcYAWHydNqPwebHd2vpotPvmsl34AyVsJqmhGO51XZDSMdX04B-2FR6HsLy2ossQZgGZ6kqeWBW4Gysqw3bIzU-3D" universal="true"  style="text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"><img src="https://braze-images.com/appboy/communication/assets/image_assets/images/61a54204f8a0bc021d2d2873/original.jpg?1638220292" alt="sponsor" width="120" style="border-radius: 4px; display: block; outline: 0; width: 100%; max-width: 120px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;" class="mw150px"></a>
+		    </td>
+			</tr>
+			</table>
+			</div>
+<!--[if (gte mso 9)|(IE)]></td><td align="center" style="width:438px;"><![endif]--><div style="display: inline-block; vertical-align: top; width: 100%; max-width: 438px;">
+        	<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 88%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" class="w100">
+	        <tr>
+            <td align="left" valign="top" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            	<p style="color: #2B273C; font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 26px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 8px 0 0; padding: 0;" align="left">Free UnShake at Cold Cookie Company</p>
+                <p style="color: #2B273C; font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-size: 16px; font-weight: normal; line-height: 22px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 8px 0 0; padding: 0;" class="fnt14" align="left">Join Yelp Austin at Cold Cookie Company on Wednesday, September 14 for a free UnShake, featuring two scoops of locally sourced ice cream, two scratch-baked cookies, two toppings, and whipped gas.</p>
+            </td>
+            </tr>
+            <tr>
+	        <td align="center" style="padding-top: 24px; padding-bottom: 10px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+				<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+		        <tr>
+		        <td style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+		        	<!--[if (gte mso 9)|(IE)]>
+					<table align="center" border="0" cellspacing="0" cellpadding="0" style="width:176px;">
+					<tr>
+					<td valign="top" align="center">
+					<![endif]-->
+		            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate; border-radius: 4px; width: 100%; max-width: 176px; transition: all .6s ease; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border: 1px solid #bbbac0;" class="cta-white" bgcolor="#ffffff">
+		            <tr>
+		            <td height="48" valign="middle" style="height: 48px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" align="center">
+		            <a href="https://clicks.yelp.com/uni/ls/click?upn=G7Qj1IRHFewGDXeOuVajbg6qFc5nAeqog3IIFm03yOPXfHnJDjTnw0VLeredRfweoVKr3YnNlZ78WIKK3dmwZMKuw89eVfD8aW1Rt7sfgUh8jYmGVShkc8sTv-2F0kdDIiNnwtDt2g3ZItumeT5ZHNo9wzJvcny9RcMppxe-2F6YUCfRisL9aMMc-2BqF393xHBAj-2FijNfxnEkPL7T1rUy5M52zFYdp6at5q-2FSmd-2FDWzHRQrJl0q1hB7rKmDyWa-2B7YYF1ubjdNEiRh8uhYoN6B4FkZoZneE8j90os9KzmpIKyyTCx2VbdBlZKpLVUFdYQPZhFC6v0addgHUY-2Fpk0ta-2BChTPg-3D-3DmXQP_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ2UpEX-2BEcdUNba9BbrOHHWIM-2FvAyZRHtgWjFI8PJhBVMeUzGzBiZVtoljLxCYu5SZkfeZYsNLiI9fUiGOTD1TM0fPWoHjXKMffSZruZVSPz1JhcDBpbhW8o1Ns4BvovgpSK1YHkpWUNq2XbjwrZTGuI-3D" universal="true"  style="display: inline-block; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #2B273C; text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding: 10px 5px;"><!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->More info<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]--></a>
+		            </td>
+		            </tr>
+		            </table>
+		            <!--[if (gte mso 9)|(IE)]>
+					</td>
+					</tr>
+					</table>
+					<![endif]-->
+		        </td>
+		        </tr>
+				</table>
+			</td>
+			</tr>
+			</table>
+			</div>
+	  		<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+		</td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+	</table>
+	<!--/module: sponsor module - left aligned-->
+	
+	
+
+    <!--footer-->
+	<!-- module 16: divider-->
+	<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <tr>
+    <td align="center" style="padding-top: 32px; padding-bottom: 10px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+		<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="center" style="border-top-width: 1px; border-top-color: #dcdfe5; border-top-style: solid; line-height: 0; font-size: 0; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">&nbsp;</td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+	</table>
+	<!--/module 16: divider-->
+
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" bgcolor="#ffffff">
+    <tr>
+    <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 90%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+        <tr>
+        <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding: 30px 0;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 65%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" class="w96">
+            <tr>
+            <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                <a style="text-decoration: underline; color: #2B273C; font-size: 14px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0px 10px;" href="https://clicks.yelp.com/ls/click?upn=G7Qj1IRHFewGDXeOuVajbsZ-2BVBK-2BFZljv7fTodAq7ZQZbLFavUsOmswN7QekFGYUVXzywNWopSGxHnbme7xxzFtvguaol9zSyOjIRhcadhpL8EZ-2FCKufgboZmfbXqsWqmdpQGQCJ5W40-2F7OoF-2FbN0NnEHjItfdAIZPl9Hh0aqcHAbIm7wT7MZrvP9YELrT6xrAQEqn0rYfGBUEZHmEdPxogSpfZFYHK-2FKCke9sXWxvDOH5OojVlLsSsvTQIMI86QDcYTPXpz-2Fg7UKkVsrEQrb0ccw2Ad1XfNS4CmAj98XK8-3D-cTj_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZwCEXD5J-2FUgxJiSIfw7BcbFtt4t6k4Di0-2FkfNIMbucvgVJVcXRFOy4xeBLC-2Bcp7FORypbbzQYdmE-2FGTm-2BlQArR6BJY1XiTKWQuvi7qQdsENIMyMP1D9kpe6wYbFZMaWZ8OJQJ5QHDxqVlAESV-2BvwCRQ-3D">  <img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/5f3c1020f5d167650156794c/original.png?1597771808" alt="Twitter" width="27" style="display: inline-block; outline: 0; color: #333333; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12px; width: 27px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;"></a>
+            </td>
+            <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                <a style="text-decoration: underline; color: #2B273C; font-size: 14px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0px 10px;" href="https://clicks.yelp.com/ls/click?upn=G7Qj1IRHFewGDXeOuVajbgjM51c26je6VTZKg73befLox0hbgtMLIUFEc9vfJqpdXHcErzT45UqyI8Abg8kSo-2BxnlDYQi37cDrhuwD-2BhojJ9nWTvWma1un9YXHAAFIpCyCTvvYO3MRsNLImgMkM33SzQJmJaVhN7CS0VNDeCwdcGaG8ln-2BIDPtK9-2BUzm-2F-2BcKj9TXPSwR12oFQh09EjmVnFH-2BgOl6QMpsJhvLr-2B1Cz5r689Y7NQiAv0Wbnv5c8YTV7DWAjQcoC1-2Fja9vdYX9rllpsu10dN-2F3vpY-2BPbzMLmy0-3DM5Sj_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ4O2YOEMtWTiIZZYsffRf8OA-2FVP8ag8DlpmNNi-2F-2B1I9X8o9GgMI2JK-2BevS6zCu4xyAR8QQklgRw75-2BANjeZ-2F82tdlLzjmOsc2cumNzLsfXwNq5tSLv4mCwisP31UR81KKVgVlXb-2BpyvOKTXZpKfvPkA-3D"> <img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/5f3c102081f9cb0248d40a32/original.png?1597771808" alt="Facebook" width="25" style="display: inline-block; outline: 0; color: #333333; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12px; width: 25px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;"></a>
+            </td>
+            <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                <a style="text-decoration: underline; color: #2B273C; font-size: 14px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0px 10px;" href="https://clicks.yelp.com/ls/click?upn=G7Qj1IRHFewGDXeOuVajbli2Gvk7z-2FJQ-2FOt9SO9CV3GM4aW8hHozWGfDwVJw2ZQWGyHXE15O5vXjuCsiK7D0rbEtZYua3GKugNjM9z5OIfiLa6GponkZtDcnYg55-2BR5Ktr3BEyku7IL1rIcCCJI1JwqwYINaDYrBlGU4g1yaYaS-2BKBnCnk4lLGwmF0hrED8PByfqFiM2rTG-2FltmdpK9aCn9vq3AJb1rlTU-2BkAlMCmc3CRbWugYO93e8XPk0jhdLJHyI8JnUFdlpIADiUT4q5jr7gfII0CGJsSqDe2mZ0iiQ-3DGY8Z_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZwftoUiBYFe-2BDAnHshlChoBSY93h5FPT1E4OfRkAgRJjIlv9EHBacZ3DxxqglGhMjUm5GYIIjXPUhvhxjq-2BCJr5u8-2FVcmrmw1XAtuFwNpDusLIlQUY-2F62rQrWjsPY1z3DN8S-2FerTgKHQ2sCqdS58jnc-3D"><img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/5f3c102012126e57f8410081/original.png?1597771808" alt="Instagram" width="25" style="display: inline-block; outline: 0; color: #333333; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12px; width: 25px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;"></a>
+            </td>
+                <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                <a style="text-decoration: underline; color: #2B273C; font-size: 14px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0px 10px;" href="https://clicks.yelp.com/ls/click?upn=U2Fqq75yktogTl-2FyuAzm2-2Bz-2FCftlDjv4y2AfmduWrb7nzJFoGBD6G-2Bca87YLnSxUYPOg2IzrLn33GsfnljD98nWxTNhga-2B-2FxYvNeU3FNBRurK5SeKFfQX6mgS87Cux6ZYs-2FJB3bC8yFCbzZiZdBw5cGJ-2BxFeyifnYf5OgyqPmgSymFIBvL3EGPmWxNb-2BelL80DcydyyZdHxCbCqrMUcI6gyDMkF9P-2FUvuxChqC9m1edsC4d-2FbTD4vJ9-2ByZFF-2Bu-2B8WBxf5WELXjeJBuPJOhMf4PM7WY3GWmGtnGbaxwhEvVQ-3DRNvP_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZw2kJ3KXFqZgYFMd794wqJ3Yz1OUUfDgNHavcLJxMH0N0T6tINq-2BNZJe535oKCMN0yQDU0r0X3q7U229eEoMW9UOtmGlDbUEkqK-2FPUqUftEHohwMt8qmMuDml4Sv0LzFYcX3OE4G-2B3kLmgwXJp27x6g-3D"><img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/5f3c1020df331e15b23f211a/original.png?1597771808" alt="Yelp blog" width="25" style="display: inline-block; outline: 0; color: #333333; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12px; width: 25px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;"></a>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        <tr>
+        <td align="center" style="padding-bottom: 25px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            <p style="color: #757280; font-family: Arial,sans-serif; font-size: 14px; line-height: 20px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;">This email was sent to <a href="" style="color: #00838F; font-family: Arial,sans-serif; font-size: 14px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">idatewang@gmail.com</a>
+		    <br>Not in Austin? <a href="https://clicks.yelp.com/ls/click?upn=G7Qj1IRHFewGDXeOuVajbmGms3PvN6ruvljX3MMoKaxMX8HqAQsklPYtifYhqymDWouc0JCrw4iXL0ilVvXwNb-2BaXBITMFlmMSD7dfJO-2BYRhKXCkAY-2Bvmw6g0gZxs2cl1yO2V7-2Bu6qfKXqmh-2BQSV7-2FKFHwcdWCxAybHNdRjTxUy-2BCQAewe1kpPHp5fmNcjLTO9x2UCF5ZbQ3PtyCScY3wHTf7W2ix7IdjvGMuF2klXuvaYOLhTcKfbbY4FMuhfjBg36PCAXPWcptxClD-2Bm6JJS-2Bvk-2BYtHImPjaWWTIseLg-2BEoo-2FMSJluBMPUP-2FBt-2FYBMTGa4_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ8juu2kHFgiFBc90N4d3E9BIHQuV2Kjm6apmcS-2FnL69vBoRO87Zdsnc5GD9fIrSNDSmC2tRFrC5CjOsSeiiGNRhZBjfpkCZpeePlIvZ3pmtq-2BHoyyTm76SBvLBoM1c4VftNm2PzsRc4Svzm-2FSEZXy-2F8-3D" style="text-decoration: underline; color: #555555; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">Update</a> your subscription settings. 
+		    <br>Don't want to receive these emails anymore? <a href="https://clicks.yelp.com/ls/click?upn=G7Qj1IRHFewGDXeOuVajbgo-2BuNFNp70wuPii6ZxIUKjXyMHkOGizXqmlal4-2B8AY7HfyOYqO5iTRCn1zr4Up1Mkzdfb20kSZeE6JqaX2GIiCuKcAzYPS-2FQ25yMaa0faVb2jjOfKrZdmQhThfh8nYMVLEDfskAIM5ex7u5enlwRoRaH3t4sX-2FhNFKSVlT1kTjic6IOoJ4wKKhMePdT8SUxksVUgCn3vJxnnjaj-2FTRtMVPm-2FQFDhAVPuRfaUAyyrsrHayKHyD5HtMY5MgxliGI9xUGlYJHmZJQKnWXu030qZ0xmTlLKFhX2JPi1Gc4brvF9GjcOkcEGF1u9Hk8I-2FAxi7pgtqA0uc9rsMT-2FSzkWjhrDXFXFYhYUsM8w3edezYhVmVEGR_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZxnyOKbUN4Myb3ZWIVgAdXo5yORtFfJjhzKuWxke8v700wum8AaqeJNpe51mqark1IMBPxQJF0Vo6FdJxMsSzZX-2BkQSUJrpUpHT71g3tN96ArjOumV43Rz2F0KLOXC-2FS86p4kLhEfgncQXsxv1-2FKA1g-3D" style="text-decoration: underline; color: #555555; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">Unsubscribe</a>
+		     <br>Manage all your notification settings <a href="https://clicks.yelp.com/ls/click?upn=G7Qj1IRHFewGDXeOuVajbmGms3PvN6ruvljX3MMoKaxMX8HqAQsklPYtifYhqymDWouc0JCrw4iXL0ilVvXwNb-2BaXBITMFlmMSD7dfJO-2BYRhKXCkAY-2Bvmw6g0gZxs2cl1yO2V7-2Bu6qfKXqmh-2BQSV7-2FKFHwcdWCxAybHNdRjTxUy-2BCQAewe1kpPHp5fmNcjLTO9x2UCF5ZbQ3PtyCScY3wHTf7W2ix7IdjvGMuF2klXuvaYOLhTcKfbbY4FMuhfjBg36PCAXPWcptxClD-2Bm6JJS-2Bvk-2BYtHImPjaWWTIseLg-2BEoo-2FMSJluBMPUP-2FBt-2FYBM1Peq_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ1-2FaoVHEMsTEnIjXe9P8rzh4Z-2FFHw316y2NnGfkrtVRHhveywqExHOl9AH8saB9b7w5Q6-2BBP-2BgaKe5E6KFstCRoW0pMfiFHXu1rnKFkyejCREDSGqzcpK08LRjclgcxT0PqJo56sPElMgNfhbljNiMk-3D" style="text-decoration: underline; color: #555555; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">here</a></p>
+		     
+		   <p style="font-family: Arial,sans-serif; font-size: 14px; line-height: 20px; color: #757280; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 16px 0 0; padding: 0;">© 2022 | Yelp Inc, 350 Mission Street, San Francisco, 94105 | <a href="https://clicks.yelp.com/uni/ls/click?upn=G7Qj1IRHFewGDXeOuVajbmutTuH6SrFnQ0S-2B2WL4Ej0vNA0nueqHFE5Rd85R9HMWxd-2FdHCWgqJdc2CihlwdgZp5C9HaU6B36gRMutTNQ4fcOJFMYTlQ7RwZ7eJ5bY2PbRLqupq2A1gK3tJz3s3e8dRdFlhzvBO71zqvG3d-2F6IUjCxC3SZYw6D2t53kQQdcLlpG8QwEV7IPsgTj1jlSyzqfHM33BDhjx9Kuz1jnU-2BLGPA-2FciyJZFy0zdMdeIFMp38pKfy-2BJ0giCUHHldQnmOLqw-3D-3D2gy8_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ4CWKfCSH4NtDU5KNfansqYWLuwu-2F-2FFqULbMQ-2FYzFqXkUGuIJ246YSEBSOGYbgsG9Buwmz2RpIpVqrQEYyEdWW7zVR0M8zZbZUHm9V-2B4MgUvPiNNNNwh9vCnTqTrLrU4pUDL-2BkIbb4fjwVbDZFp-2BtSc-3D" universal="true" style="color: #00838F; font-family: Arial,sans-serif; font-size: 14px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">www.yelp.com</a></p>
+        </td>
+        </tr>
+        </table>
+    </td>
+    </tr>
+    </table>
+    
+    <!--module 17: app badges-->
+	<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 620px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+	<tr>
+	<td align="center" style="padding-top: 0px; padding-bottom: 30px; border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+	  <table align="center" cellpadding="0" cellspacing="0" border="0" width="280" style="width: 280px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+	  <tr>
+	  <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+	     <a href="https://clicks.yelp.com/ls/click?upn=D1MPnkY1FyvcYYnq-2FL88cnVyBCSgYBLZKIK6H6z6E1EXOcseY-2F0OYeAUkZIz9i62hJse_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ5EkPdb59G0ZoAjTh6HKuD7lGUyrkhr1ADIJpSZ5n3Vz60Jcj8zCuZCmnxszPoPeQbvVtltku0irlXvah0XP6lLaIu0qwvsBhNFCBKm720ruMWBVb5ykmVrZfPUVRc7kX9Bq237g9Lk0BbDrmgNawNk-3D" style="color: #333333; text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"><img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/5ec6da2936e9d95ebf43cef8/original.jpg?1590090281" alt="Download on the apple store" width="134" style="display: block; outline: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333; width: 134px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;"></a>
+	  </td>
+	  <td align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+	     <a href="https://clicks.yelp.com/ls/click?upn=D1MPnkY1FyvcYYnq-2FL88cnVyBCSgYBLZKIK6H6z6E1EXOcseY-2F0OYeAUkZIz9i62mAxO_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPnpqwMkstu9ry2ul2LhrTxViGcVZKOiNLBQ77saR-2BGVMIemYl0zHxfBGaZmm8rtoQS9kBlD-2FyofNQn-2BnyQ1hTIeK0UHKIylFX4aqr4LE86GJKE1sHYnykWRXg5xLzuNXgFRHIB-2FHRjVRps3s2cpEqjad0HcalCWWh1psD-2BqJaTxCTw-2FjdJTshZEpnBFe2RpVNBD-2F5jgvOZF9KxJq29JTQH5KC00s27d0kgS6CzfQHKMGPtFipsTvktd-2FoxoJhuRaakLGsZwzHKmlBaZWrMX65mnOgu6wi-2FY90MY0BN10JUKgoBVC1JqlkvmmxyEFSq4A-2Fx0JVvoMPvF4sph0hCh5EIoGvJCpcI9gNwaQN73P3vlXaSwM5dIRcQ6SB7GPBAgV1D4WkLQ5QwlQSd5-2FgX3JQY8b7kBPdOLGefexaEF6L2Wofg-2BRXro4ynCYjDx0Q-2Bx1p2LPHTlX5h-2F9YRPhzfSE4KSiJahQt6l812nMSLhtW-2BtMU7aAHTNb9dWaYYcxjjwTWTFK8wNmxKdAp-2F-2BACvqVKKj5Pir-2FA4Ija0tAu96AVr0dpqLHwaq6kjIz8sx6kh6DI9VTIK-2Fago4-2Fpfznmc0QbAmWGMY1aM9aRhhEiX0wxWm0VXsh9kDRtdhsrlgnk5ptPnhF9j7EL5cmZKJdBl4sMilJrJHSyb2tarK8H58YkiMvUrkwF2I21ch-2F0JzZrSFhbCuIj-2FEoh64-2BbCFoKUb1so35a1fXxKst3YNON2Zt5exZ2-2B-2BycZDahYnK8erSIWrj1ejZDXBhdiGvcy-2BZKAmCHm3d610miJOfjLzwzPUxfpFBtjkhqqjruagNViNauozIRXsGKIB8dZsEzD0oET3Z55iyiNYds1c2Hsdc8kIIlzMgfpZ1BlI8SlrID5WzJFC1jM-3D" style="text-decoration: none; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"><img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/5ec6da29302b7f79e8924084/original.jpg?1590090281" alt="Get it on Google Play" width="134" style="display: block; outline: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333; width: 134px; height: auto; text-decoration: none; -ms-interpolation-mode: bicubic; padding: 0; border: 0;"></a>
+	  </td>
+	  </tr>
+	  </table>
+	</td>
+	</tr>
+	</table>
+	<!--module 17: app badges-->
+    <!--/footer-->
+
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<img src="https://www.yelp.com/tracking/track.gif?utm_medium=email&utm_source=Braze_220907_rc_cm_localyelp_sportsbars_connect_Austin&utm_campaign=Sep-07-2022&utm_term=0SMUG5o16wHG0bE6ajt_rg&ytl_=b4a5d3bd9ff6f0e9d54938ec81ea2f5b&amp;utm_content=connect_post_view" width="0" height="0" align="right" style="height: auto; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: 0;">  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="https://clicks.yelp.com/wf/open?upn=GFd3-2BZ-2BwdFKn-2FmmJ2KvfVvpVNTBXCVkTQvfDE9kJ8UKER-2BFC0qvOQYZtbmBfWgcRHxgatFqfmE9BQNCkj-2F2xBHxMQig4uQcdgbrwnRcji6kB0hUrrCGlyN1IIkyOIckRzURjr4VfncOTXvQfeBcEhVOcgwO-2ByyiwrLfQHk4MfMtW7YEuIGhTSR28CDBp4X8TnAawjVoOYacFQOMgQROaLilAEQFnowRSeSdjaJiFJr5JyD4o5x-2B3EutJ2f-2FVpiEB3lc7lzGtmm814U9vspt6m4QGEx-2Fdk2dXV2Ep1Sa1fBO9flH2ZN6lRgVvYdhIPWQyz1HHCdACDIYTNrgZnp3rBJnVNSBfo8WqPgHPhckUlEGU7A4MNgPxNgNpvT5GruFkfDZkoh-2BSd2OXyTbixs2r54jzgQPyNRbA73YTYQerv7iFT4ZrQiVfYAbImKAngK55KuN3o2UD-2BwtqywuPQ6StjEuOGYODr7hlHvGRfnJhrE9W71lZQLanVJQ1jAEMQ-2BbqeHrIe1b2bzAfSjjFm7bfuyR2MYF4q9Dg5fyamtGELxFmbOMCIix6Mq6DemLltaVbRaWO1K9E-2FKM8JSrYafl0-2BH5-2BsuZua-2Bnhot7fXVOTX-2FfcDuE0Ao9gbcLZRtNRYBnhuOo2XXM0ldiA4mlCGLB27YRHh-2ByY5dtrZrXf1xx9ho8tyhxXKZ3ucKd87YL3jUBh8O4r-2FGqaTeMHCH56fCFETTD3erSKZMjmGCcaEE1r56zeeZ1w2hbRQSfS3xtDT9bAoCVB4OAm3DsWFaoNdfk0gAbwd6XO95jnIbwgvpjiaMn3Szu5-2BW8QB4m55lN4r95D6qy-2B5Nnnq7qfRnTNQH5Xtvb0L-2B9Kuhk0C3YIA8XbgvU9UvgP46TX6eOrV8qnkYbZ0qpzOoIeSurcqvd4HChmyYgzYB8qgHjkAfv7FUHMy5g-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>

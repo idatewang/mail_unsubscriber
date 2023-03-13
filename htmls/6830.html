@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Project Glass Invitation</title>
+      <style type="text/css">
+         /* Take care of image borders and formatting */
+         img {
+         max-width: 700px !important;
+         outline: none;
+         text-decoration: none;
+         -ms-interpolation-mode: bicubic;
+         }
+         a img {
+         border: none;
+         }
+         /* Fix Apple contact links */
+         .applefix a {
+         color: #888888;
+         text-decoration: none;
+         }
+         /* Responsive Styles*/
+         @media only screen and (max-width:700px) {
+         /* set column image maximum width for mobile screens */
+         img[class="columnImage"] {
+         height: auto !important;
+         max-width: 280px !important;
+         width: 100% !important;
+         }
+         table[id="emailContainer"] {
+         width: 100% !important;
+         }
+         table[class="columnContainer"] {
+         width: 100% !important;
+         }
+         table[class="mobileButton"] {
+         width: 60% !important;
+         }
+         td[class="columnSingle"] {
+         display: block !important;
+         width: 100% !important;
+         }
+         }
+         @media screen and (prefers-color-scheme: dark) {
+         body {
+         background-color: black;
+         color: white;
+         }
+         img {
+         backface-visibility: hidden;
+         }
+         }
+         @media screen {
+         @font-face {
+         font-family: "Bogle";
+         src: url("https://i5.walmartimages.com/dfw/4ff9c6c9-2a1f/k2-_faacdca5-0dbf-4f67-8fd8-acbfe4473ce2.v1.eot"), url("https://i5.walmartimages.com/dfw/4ff9c6c9-8328/k2-_9d427377-4b6c-4135-a22f-b6ae0cfc9002.v1.awoff"), url("https://i5.walmartimages.com/dfw/4ff9c6c9-91ad/k2-_29284158-b08b-46be-b865-73f06a834c93.v1.bin") format("truetype");
+         font-weight: normal;
+         font-style: normal;
+         }
+         }
+         /* CSS resets resolve spacing, padding, and margin issues */
+         html {
+         font-family: 'Bogle', "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+         }
+         body {
+         width: 100% !important;
+         -webkit-text-size-adjust: 100% !important;
+         align-content: "center";
+         background-color: "#FFFFFF";
+         margin: 0px;
+         padding: 0px
+         }
+         .disclaimer {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 14px;
+         text-decoration: none;
+         color: #000000;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         /* Resolve text display issues */
+         * {
+         -ms-text-size-adjust: 100%;
+         -webkit-text-size-adjust: 110%;
+         border: 0;
+         }
+         .footer {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 14px;
+         line-height: 14px;
+         color: #969696;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         .footerLink {
+         text-decoration: underline !important;
+         text-decoration-color: rgb(150, 150, 150);
+         }
+         .navItem {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 16px;
+         text-decoration: none;
+         white-space: nowrap;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+      </style>
+      <style type="text/css">
+         /* Fonts */
+         .account {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 14px;
+         text-decoration: underline;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         .navItem {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 16px;
+         text-decoration: none;
+         white-space: nowrap;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         .main {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 16px;
+         text-decoration: none;
+         color: #000000;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         .button {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 16px;
+         text-decoration: none;
+         white-space: nowrap;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         color: #ffffff
+         }
+         .disclaimer {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 14px;
+         text-decoration: none;
+         color: #000000;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         .footer {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 14px;
+         line-height: 14px;
+         color: #969696;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         /* Better img rendering */
+         img {
+         -ms-interpolation-mode: bicubic;
+         }
+         .navItem {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 16px;
+         text-decoration: none;
+         white-space: nowrap;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         .hiddenNav {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 16px;
+         text-decoration: none;
+         white-space: nowrap;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         .main {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 16px;
+         text-decoration: none;
+         color: #000000;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         }
+         .button {
+         font-family: 'Bogle', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+         font-size: 16px;
+         text-decoration: none;
+         white-space: nowrap;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         color: #ffffff
+         }
+         .footerLink {
+         text-decoration: underline !important;
+         text-decoration-color: rgb(150, 150, 150);
+         }
+         /* Turn off link meddling */
+         *[x-apple-data-detectors] {
+         color: inherit !important;
+         text-decoration: none !important;
+         }
+         .x-gmail-data-detectors,
+         .x-gmail-data-detectors *,
+         .aBn {
+         border-bottom: 0 !important;
+         cursor: default !important;
+         }
+         /* No more download img button */
+         .a6S {
+         display: none !important;
+         opacity: 0.01 !important;
+         }
+         img.g-fix+div {
+         display: none !important;
+         }
+         /* Remove underlines */
+         .button-link {
+         text-decoration: none !important;
+         }
+         @media only screen and (max-width: 480px) {
+         body {
+         width: auto !important;
+         min-width: 100vw !important;
+         padding: 0px !important;
+         }
+         .wrapper {
+         width: auto !important;
+         min-width: 100vw !important;
+         }
+         .sideSpacer {
+         width: 5% !important;
+         }
+         [owa] .sideSpacer {
+         width: 5% !important;
+         }
+         .hiddenNav {
+         display: none !important;
+         }
+         [owa] .hiddenNav {
+         display: none !important;
+         }
+         .hiddenSpacer {
+         display: none !important;
+         }
+         [owa] .hiddenSpacer {
+         display: none !important;
+         }
+         .navItem {
+         font-size: 14px !important;
+         word-break: normal !important;
+         word-wrap: nowrap !important;
+         }
+         [owa] .navItem {
+         font-size: 14px !important;
+         word-break: normal !important;
+         word-wrap: nowrap !important;
+         }
+         .navSpacer {
+         width: 18% !important;
+         }
+         [owa] .navSpacer {
+         width: 18% !important;
+         }
+         .mobileImage {
+         display: block !important;
+         }
+         .desktopImage {
+         display: none !important;
+         }
+         .desktopSocial {
+         display: none !important;
+         }
+         [owa] .desktopSocial {
+         display: none !important;
+         }
+         .mobileSocial {
+         display: inline-table !important;
+         }
+         [owa] .mobileSocial {
+         display: inline-table !important;
+         }
+         }
+      </style>
+      <style type="text/css">
+         @media screen yahoo {
+         @media (max-width: 480px) {
+         body {
+         width: auto !important;
+         min-width: 100vw !important;
+         padding: 0px !important;
+         }
+         .wrapper {
+         width: auto !important;
+         min-width: 100vw !important;
+         }
+         .sideSpacer {
+         width: 5% !important;
+         }
+         .hiddenNav {
+         display: none !important;
+         }
+         .hiddenSpacer {
+         display: none !important;
+         }
+         .navItem {
+         font-size: 14px !important;
+         word-break: normal !important;
+         word-wrap: nowrap !important;
+         }
+         .navSpacer {
+         width: 18% !important;
+         }
+         .mobileImage {
+         display: block !important;
+         }
+         .desktopImage {
+         display: none !important;
+         }
+         .desktopSocial {
+         display: none !important;
+         }
+         .mobileSocial {
+         display: inline-table !important;
+         }
+         }
+         }
+      </style>
+      <style type="text/css">
+         @media screen {
+         @font-face {
+         font-family: "Bogle";
+         src: url("https://i5.walmartimages.com/dfw/4ff9c6c9-2a1f/k2-_faacdca5-0dbf-4f67-8fd8-acbfe4473ce2.v1.eot"), url("https://i5.walmartimages.com/dfw/4ff9c6c9-8328/k2-_9d427377-4b6c-4135-a22f-b6ae0cfc9002.v1.awoff"), url("https://i5.walmartimages.com/dfw/4ff9c6c9-91ad/k2-_29284158-b08b-46be-b865-73f06a834c93.v1.bin") format("truetype");
+         font-weight: normal;
+         font-style: normal;
+         }
+         }
+         /* CSS resets resolve spacing, padding, and margin issues */
+         html {
+         font-family: 'Bogle', "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+         }
+         body {
+         width: 100% !important;
+         -webkit-text-size-adjust: 100% !important;
+         align-content: "center";
+         background-color: "#FFFFFF";
+         margin: 0px;
+         padding: 0px
+         }
+         /* Resolve text display issues */
+         * {
+         -ms-text-size-adjust: 100%;
+         -webkit-text-size-adjust: 110%;
+         border: 0;
+         }
+         /* Better img rendering */
+         img {
+         -ms-interpolation-mode: bicubic;
+         }
+         /* Turn off link meddling */
+         *[x-apple-data-detectors] {
+         color: inherit !important;
+         text-decoration: none !important;
+         }
+         .x-gmail-data-detectors,
+         .x-gmail-data-detectors *,
+         .aBn {
+         border-bottom: 0 !important;
+         cursor: default !important;
+         }
+         /* No more download img button */
+         .a6S {
+         display: none !important;
+         opacity: 0.01 !important;
+         }
+         img.g-fix+div {
+         display: none !important;
+         }
+         /* Remove underlines */
+         .button-link {
+         text-decoration: none !important;
+         }
+         a {
+         text-decoration: none !important;
+         }
+      </style>
+   </head>
+   <body align="center" bgcolor="#FFFFFF" style="-webkit-text-size-adjust: 100%;margin: 0; padding: 0;" width="100%">
+      <table align="center" bgcolor="#F2F2F2" border="0" cellpadding="0" cellspacing="0" style="-webkit-text-size-adjust: 100%;max-width:700px;" width="100%">
+         <tbody>
+            <tr>
+               <td align="center">
+                  <table align="center" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="wrapper" width="700" style="max-width:700px;">
+                     <tbody>
+                        <tr>
+                           <td align="center">
+                              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:700px;">
+                                 <tbody>
+                                    <tr>
+                                       <td align="center">
+                                          <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:700px;">
+                                             <tbody>
+                                                <tr>
+                                                   <td align="center" height="30" valign="middle" width="100%">
+                                                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:700px;">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td align="center" height="30" valign="middle" width="100%">
+                                                                  <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                                     <tbody>
+                                                                        <tr>
+                                                                           <td align="right" valign="middle">
+                                                                              <a href="https://www.walmart.com/account/login" style="text-decoration:underline;font-size:10px;color:#888888" target="_blank" title="My account"> My account </a>
+                                                                           </td>
+                                                                        </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="center" valign="top" width="100%" style="width:100%; max-width:700">
+                                                                  <table cellpadding="0" cellspacing="0" style="background-color:#0071ce; width:100%; max-width:700px;">
+                                                                     <tbody>
+                                                                        <tr>
+                                                                           <td align="center" valign="top">
+                                                                              <a href="https://www.walmart.com/" target="_blank" title="Walmart - Save Money. Live Better.">
+                                                                              <img alt="Walmart - Save Money. Live Better." height="100" src="https://global.cdn.survey.medallia.com/c3aea9bac5e424951dfabb0cb49404c07c74d78f" width="100" />
+                                                                              </a>
+                                                                           </td>
+                                                                        </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="center" bgcolor="#FFFFFF" height="51" valign="middle" width="100%">
+                                                                  <table align="center" border="0" cellpadding="0" cellspacing="0" height="51" width="94%">
+                                                                     <tbody>
+                                                                        <tr>
+                                                                           <td class="navItem">
+                                                                              <a href="https://www.walmart.com/cp/Electronics/3944" style="text-decoration:none;color:#414042;word-break:normal;white-space:nowrap;font-size:16;" target="_blank"> Electronics </a>
+                                                                           </td>
+                                                                           <td class="navSpacer" width="10%"> &nbsp; </td>
+                                                                           <td class="navItem">
+                                                                              <a href="https://www.walmart.com/cp/Home/4044" style="text-decoration:none;color:#414042;word-break:normal;white-space:nowrap;font-size:16;" target="_blank"> Home </a>
+                                                                           </td>
+                                                                           <td class="navSpacer" width="10%"> &nbsp; </td>
+                                                                           <td class="navItem">
+                                                                              <a href="https://www.walmart.com/cp/Clothing/5438" style="text-decoration:none;color:#414042;word-break:normal;white-space:nowrap;font-size:16;" target="_blank"> Fashion </a>
+                                                                           </td>
+                                                                           <td class="navSpacer" width="10%"> &nbsp; </td>
+                                                                           <td class="hiddenNav">
+                                                                              <a href="https://www.walmart.com/cp/Baby/5427" style="text-decoration:none;color:#414042;word-break:normal;white-space:nowrap;font-size:16;" target="_blank"> Baby </a>
+                                                                           </td>
+                                                                           <td class="hiddenSpacer" width="10%"> &nbsp; </td>
+                                                                           <td class="hiddenNav">
+                                                                              <a href="https://www.walmart.com/cp/Toys/4171" style="text-decoration:none;color:#414042;word-break:normal;white-space:nowrap;font-size:16;" target="_blank"> Toys </a>
+                                                                           </td>
+                                                                           <td class="hiddenSpacer" width="10%"> &nbsp; </td>
+                                                                           <td class="navItem">
+                                                                              <a href="https://www.walmart.com/all-departments" style="text-decoration:none;color:#414042;word-break:normal;white-space:nowrap;font-size:16;" target="_blank"> See&nbsp;All </a>
+                                                                           </td>
+                                                                        </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td style="width:1000px;height:4px;background-color:#ffc220" height="4"></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <!--===================  Start email header  ===================-->
+                                                   <td align="center" valign="top">
+                                                      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                                                         <tr>
+                                                            <!--===================  Start email body  ===================-->
+                                                            <td>
+                                                               <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                                                                  <tr>
+                                                                     <td align="center" valign="top">
+                                                                        <table bgcolor="#FFFFFF" border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                                           <tr>
+                                                                              <td align="left" valign="top" style="padding: 1.5rem;">
+                                                                                 <!-- Set main horizontal and vertical alignment. Horizontal: left, center, right; Vertical: top, middle, bottom -->
+                                                                                 <span style="font-family:Arial; font-size:16px; margin-top: 1rem; color:#000000;">
+                                                                                    Dear Valued Customer, <br>
+                                                                                    <br> Thank you for being a Walmart customer. <br>
+                                                                                    <br> Listening to you and learning how we can improve is important to us, and your feedback helps us create better experiences for you and other Walmart customers in the future. <br>
+                                                                                    <br> We would greatly appreciate it if you could take 5 minutes to complete the survey by clicking on the link below. <br>
+                                                                                    <br>
+                                                                                    <br>
+                                                                                    <!--  <a href="https://survey.medallia.com/?es7rc8xwc9rzsr7my3fmht" target="_blank">
+                                                                                       Survey Link
+                                                                                       </a> -->
+                                                                                    <!-- BUTTON
+                                                                                       The <div> surrounding the button allows you to align the button left, center or right. The commented area is for some versions of Microsoft Outlook. If colors change, they need change in both the commented and the uncommented sections of the button.-->
+                                                                                    <div style="text-align:center;">
+                                                                                       <!--[if mso]>
+                                                                                       <v:roundrect
+                                                                                          xmlns:v="urn:schemas-microsoft-com:vml"
+                                                                                          xmlns:w="urn:schemas-microsoft-com:office:word" href="https://survey.medallia.com/?es7rc8xwc9rzsr7my3fmht" style="height:42px;v-text-anchor:middle;width:200px;" arcsize="20%" fillcolor="#0574CA">
+                                                                                          <w:anchorlock/>
+                                                                                          <center style="color:#ffffff;font-family:sans-serif;font-size:18px;font-weight:normal;">Begin Survey</center>
+                                                                                       </v:roundrect>
+                                                                                       <!--[end if]-->
+                                                                                       <a href="https://survey.walmart.com/?es7rc8xwc9rzsr7my3fmht" class="mobileButton" style="max-width:600px; width:35%;mso-hide:all">
+                                                                                       <img alt="Begin Survey" src=https://global.cdn.survey.medallia.com/a90bbecef78f2c22f2b1d17c54aaf68b51cfa288 style="max-width:600px;width:30%;mso-hide:all;">
+                                                                                       </a>
+                                                                                    </div>
+                                                                                    <br>
+                                                                                    <br> We assure you that the information you provide will be used for market research purposes only. <br>
+                                                                                    <br> Sincerely, <br>
+                                                                                    <br> The Customer Experience Team <br>
+                                                                                    <!--<a href="mailto:GRPteam@walmart.com" target="_blank"><span><u>GRPteam@walmart.com</u></span></a>    -->
+                                                                                 </span>
+                                                                                 <br />
+                                                                                 <br />
+                                                                                 <span style="font-family:Arial; font-size:16px;  color:#000000;"></span>
+                                                                              </td>
+                                                                           </tr>
+                                                                        </table>
+                                                                     </td>
+                                                                  </tr>
+                                                               </table>
+                                                            </td>
+                                                         </tr>
+                                                         <!--/////////////////////  End email body  /////////////////////-->
+                                                         <tr></tr>
+                                                      </table>
+                                                      <!--===================  Start email footer  ===================-->
+                                                      <table border="0" cellpadding="0" cellspacing="0" align="center">
+                                                         <tbody align="center">
+                                                            <tr>
+                                                               <td>
+                                                                  <table width="100%" cellspacing="0" cellpadding="0">
+                                                                     <tbody>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <table style="background-color:#0071dc" width="100%" cellspacing="0" cellpadding="0">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td width="100%" height="4"></td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                              <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td height="21"></td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                           </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td style="width:39.8%">
+                                                                                          <span>&nbsp;&nbsp;</span>
+                                                                                          <a href="https://walmart.onelink.me/UIev?pid=Email&amp;c=W-FY18Q4-Email-BTH-O-DG-General-AppDLFooter-BOTH-NA-NA&amp;af_dp=walmart%3A%2F%2Fhome&amp;af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&amp;is_retargeting=true" title="Mobile Apps" target="_blank">
+                                                                                          <img src="https://global.cdn.survey.medallia.com/71b79d16f2c4c067a30904fa916b0bd6178274d2" style="max-width:91px" alt="mobile apps" width="91" class="CToWUd">
+                                                                                          </a>
+                                                                                       </td>
+                                                                                       <td>
+                                                                                          <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                             <tbody>
+                                                                                                <tr>
+                                                                                                   <td width="3%"></td>
+                                                                                                   <td width="21.5%">
+                                                                                                      <a href="https://www.facebook.com/walmart" title="Facebook" target="_blank">
+                                                                                                      <img src="https://global.cdn.survey.medallia.com/f4b368849820621dce3a45be74a925711eae8f0c" alt="Share on Facebook" style="max-width:25px;max-height:25px" width="25" class="CToWUd">
+                                                                                                      </a>
+                                                                                                   </td>
+                                                                                                   <td width="21.5%">
+                                                                                                      <a href="https://www.pinterest.com/walmart" title="Pinterest" target="_blank">
+                                                                                                      <img src="https://global.cdn.survey.medallia.com/f63106a4a4a2dd8c144ef6b84531e308e66384e9" alt="Share on Pinterest" style="max-width:25px;max-height:25px" width="25" class="CToWUd">
+                                                                                                      </a>
+                                                                                                   </td>
+                                                                                                   <td width="21.5%">
+                                                                                                      <a href="https://twitter.com/Walmart" title="Twitter" target="_blank">
+                                                                                                      <img src="https://global.cdn.survey.medallia.com/3a967cd2045047f2e0be0e599fdace56793cac4a" alt="Share on Twitter" style="max-width:25px;max-height:25px" width="25" class="CToWUd">
+                                                                                                      </a>
+                                                                                                   </td>
+                                                                                                   <td width="21.5%">
+                                                                                                      <a href="https://www.youtube.com/walmart" title="Youtube" target="_blank">
+                                                                                                      <img src="https://global.cdn.survey.medallia.com/6a71c118a62e308826722ac88515528ffd0636c0" alt="Share on Youtube" style="max-width:28px;max-height:25px" width="28" class="CToWUd">
+                                                                                                      </a>
+                                                                                                   </td>
+                                                                                                   <td width="12%">
+                                                                                                      <a href="https://instagram.com/walmart" title="Instagram" target="_blank">
+                                                                                                      <img src="https://global.cdn.survey.medallia.com/c9e9a275ac07deaebff61dacb1e587acc7adad79" alt="Share on Instagram" style="max-width:25px;max-height:25px" width="25" class="CToWUd">
+                                                                                                      </a>
+                                                                                                   </td>
+                                                                                                </tr>
+                                                                                             </tbody>
+                                                                                          </table>
+                                                                                       </td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                              <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td height="1"></td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                           </td>
+                                                                        </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" valign="top">
+                                                                     <tbody>
+                                                                        <tr>
+                                                                           <td align="left" valign="top">
+                                                                              <table align="center" border="0" cellpadding="0" cellspacing="0" valign="top" width="94%" style="margin:0 auto;">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td style="line-height:14px;color:#6d6e71;font-family:'Bogle',Arial,SansSerif;font-size:14px">
+                                                                                          <br>
+                                                                                          <span>Do not reply to this email. The inbox is not monitored. If you require assistance, please</span>
+                                                                                          <a href="https://help.walmart.com/app/home" style="color:#6d6e71" title="click here for help" target="_blank">
+                                                                                          <span style="text-decoration:underline">click here for help</span><span>.</span>                                                            </a>
+                                                                                          <br>
+                             <br />
+											<b>Help</b>
+											<br>
+                                          <span>
+                                            For assistance with any issues that need attention, please visit
+                                          </span>
+                                          <a href="https://help.walmart.com/app/home" style="color:#969696;"
+                                            target="_blank" title="click here for help">
+                                            <span style="text-decoration:underline;">
+                                              Walmart.com/Help</span></a>.
+											 <br />                                                             <br>
+                                                                                          <b>Unsubscribe</b>
+                                                                                          <br>
+                                                                                          <span>This email is a Walmart advertisement. If you do not want to receive these surveys,</span>
+                                                                                          <a href="https://www.walmart.com/account/communications-and-privacy?email=6325d5bd437f556bccf6fe022fd276ce08d0f35fe25bf34adc7d1c1f0382cd12&preftype=14&veh=eml" style="color:#6d6e71" title="Email Opt Out" target="_blank">
+                                                                                          <span style="text-decoration:underline">click here to unsubscribe</span><span>.</span>                                                          </a>
+                                                                                          <br>
+                                                                                          <br>
+                                                                                          <b>Security &amp; Privacy</b>
+                                                                                          <br>
+                                                                                          <span>Walmart protects your security and privacy. We will never ask for personal information (such as passwords or credit card numbers) in an email newsletter. If you receive such a request, please do not respond to the email.</span>
+                                                                                          <a href="https://corporate.walmart.com/privacy-security/tips/" style="color:#6d6e71" title="Learn more about our privacy and online safety tips" target="_blank">
+                                                                                          <span style="text-decoration:underline">Learn more</span><span>.</span>                                                      </a>
+                                                                                          <span>See our</span>
+                                                                                          <a href="https://corporate.walmart.com/privacy-security/walmart-privacy-policy" style="color:#6d6e71" target="_blank">
+                                                                                          <span style="text-decoration:underline">Privacy Policy</span><span>.</span>
+                                                                                          </a>
+                                                                                          <br>
+                                                                                          <br>
+                                                                                          <span>Email Marketing, <a href="http://walmart.com/">Walmart.com</a>, 850 Cherry Avenue, San Bruno CA 94066</span>
+                                                                                          <br>
+                                                                                          <br>
+                                                                                          <span>©&nbsp;2022 Walmart.</span>
+                                                                                          <br>
+                                                                                          <br><span style="display: none; max-height: 0px; font-size: 0px; overflow: hidden; mso-hide: all;"><img src="https://survey.medallia.com/?es7rc8xwc9rzsr7my3fmht&invite-opened=yes" width="0" height="0" style="display: none !important;" alt=""></span>
+                                                                                       </td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                           </td>
+                                                                        </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                               </td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                      <!--/////////////////////  End email footer  /////////////////////-->
+                                                   </td>
+                                                </tr>
+                                          </table>
+                                       </td>
+                                    </tr>
+                              </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>

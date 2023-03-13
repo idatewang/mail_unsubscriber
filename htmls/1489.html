@@ -1,0 +1,649 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <!--[if gte mso 9]>
+    <style>
+    .em_font {font-family: 'DINPro-Regular', Arial, sans-serif  !important;}
+    </style>
+    <![endif]-->
+        <!--[if !mso]><!-->
+        <link href="http://info.nvidianews.com/rs/156-OFN-742/images/dinpro-regular.css" rel="stylesheet" type="text/css">
+        <!--<![endif]-->
+        <style type="text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+            .text-block {
+                text-align: left;
+            }
+            [dir="rtl"] .text-block{
+                text-align: right;
+            }
+            
+
+            
+        </style>
+        <!--[endif]-->
+    <!--[if gte mso 12]>
+        <style type="text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+        </style>
+        <![endif]-->
+    <!--[if gte mso 14]>
+        <style type="text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+        </style>
+        <![endif]-->
+    <!--[if gte mso 15]>
+        <style type="text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+        </style>
+        <![endif]-->
+    <!--[if gte mso 16]>
+        <style type="text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !important;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+        </style>
+        <![endif]-->
+
+    <style type="text/css">
+
+        .show {
+            display: none;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        @font-face {
+            font-family: 'DINPro-Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('DINPro-Regular'), url(http://www.nvidia.co.uk/content/newsletter/fonts/DINPro_Regular.woff2) format('woff2'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Regular.otf) format('embedded-opentype'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Regular.ttf) format('truetype'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Regular.woff) format('woff'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Regular.svg) format('svg');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        @font-face {
+            font-family: 'DINPro-Bold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('DINPro-Bold'), url(http://www.nvidia.co.uk/content/newsletter/fonts/DINPro_Bold.woff2) format('woff2'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Bold.otf) format('embedded-opentype'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Bold.ttf) format('truetype'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Bold.woff) format('woff'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Bold.svg) format('svg');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            -webkit-text-size-adjust: none !important;
+            -ms-text-size-adjust: 100% !important;
+            -webkit-font-smoothing: antialiased !important;
+        }
+
+        img {
+            border: 0 !important;
+            outline: none !important;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0px;
+            mso-table-rspace: 0px;
+        }
+
+        td, a, span {
+            border-collapse: collapse;
+            mso-line-height-rule: exactly;
+        }
+
+        .ExternalClass * {
+            line-height: 100%;
+        }
+        
+        
+        table.status-summary {
+          border-collapse: collapse;
+          border: 1px solid black;
+        }
+        
+        table.status-summary th {
+          border: 1px solid black;
+        }
+
+        table.status-summary td {
+          border: 1px solid black;
+          padding-left: 4px;
+          padding-right: 4px;
+        }
+        
+        td.num-type {
+            text-align: right;
+        }
+
+        .em_defaultlink a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        span.MsoHyperlink {
+            mso-style-priority: 99;
+            color: inherit;
+        }
+
+        span.MsoHyperlinkFollowed {
+            mso-style-priority: 99;
+            color: inherit;
+        }
+
+        @media only screen and (min-width:481px) and (max-width:650px) {
+            .em_main_table {
+                width: 100% !important;
+            }
+
+            span[class=em_divhide] {
+                display: none !important;
+            }
+
+            .em_wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            img[class="image-100-percent"] {
+                width: 100% !important;
+                height: auto;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            .em_aside {
+                padding: 30px 15px !important; /*Update the values as required*/
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_aside1 {
+                padding: 30px 15px !important; /*Update the values as required*/
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_hide {
+                display: none !important;
+            }
+
+            .em_full_img {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+                min-width: 100vw !important;
+            }
+
+            .em_align_cent {
+                text-align: center !important;
+            }
+
+            .em_spc_20 {
+                height: 30px !important;
+            }
+
+            .em_side {
+                width: 10px !important;
+            }
+
+            .em_top {
+                padding-top: 20px !important;
+            }
+
+            .em_top1 {
+                padding-top: 15px !important;
+            }
+
+            .em_auto {
+                height: auto !important;
+            }
+
+            .em_height_fixed {
+                height: 320px !important;
+            }
+
+            .em_border {
+                border-right: none !important;
+                border-bottom: 1px solid #ffffff !important;
+            }
+        }
+
+        @media only screen and (max-width:480px) {
+
+            .em_main_table {
+                width: 100% !important;
+            }
+
+            span[class=em_divhide] {
+                display: none !important;
+            }
+
+            .em_wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            img[class="image-100-percent"] {
+                width: 100% !important;
+                height: auto;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            .em_aside {
+                padding: 30px 15px !important; /*Update the values as required*/
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_aside1 {
+                padding: 30px 15px !important; /*Update the values as required*/
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_hide {
+                display: none !important;
+            }
+
+            .em_full_img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .em_align_cent {
+                text-align: center !important;
+            }
+
+            .em_spc_20 {
+                height: 30px !important;
+            }
+
+            .em_side {
+                width: 10px !important;
+            }
+
+            .em_top {
+                padding-top: 20px !important;
+            }
+
+            .em_auto {
+                height: auto !important;
+            }
+
+            .em_height_fixed {
+                height: 320px !important;
+            }
+
+            .em_margin_10 {
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_top1 {
+                padding-top: 15px !important;
+            }
+
+            .em_border {
+                border-right: none !important;
+                border-bottom: 1px solid #ffffff !important;
+            }
+        }
+
+        .MsoNormal {
+            font-family: 'DINPro-Regular', Arial, Helvetica, Sans-Serif !important;
+            font-weight: lighter;
+        }
+    </style>
+    <!--[if gte mso 9]>
+
+
+
+
+
+
+        <![endif]-->
+</head>
+<body style="margin:0px; padding:0px;">
+    <!--Full width outer table start--> <!-- Preheader Copy Start -->
+    <table class="show" width="100%" border="0" cellspacing="0" cellpadding="0" style="display: none; width: 0px; height: 0px; max-width: 0px; max-height: 0px; overflow: hidden; opacity: 0; mso-hide: all;">
+        <tbody>
+            <tr>
+                <td class="mktoText" id="Preheadertext" style="font-size: 1px; font-family: 'DINPro-Regular', Arial, Helvetica, Sans-Serif; color: #ffffff; font-weight: normal; text-align: center;"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Preheader Copy End --> <!-- Header Logo Start -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+        <tbody>
+            <tr>
+                <td align="center" valign="top">
+                    <!--snippet-->
+                    <div class="mktoSnippet" id="HeaderLogoOnline">
+                        <table style="table-layout: fixed;" class="em_main_table" width="680" cellspacing="0" cellpadding="0" border="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="em_aside" style="padding: 15px 40px 15px 40px;" valign="top" align="center">
+                                        <table class="em_wrapper" style="width: 600px;" width="600" cellspacing="0" cellpadding="0" border="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" align="center">
+                                                        <table class="text-block" style="width: 150px;" width="150" cellspacing="0" cellpadding="0" border="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="top" align="center"><a href="http://tmailclick.nvidia.com/track/click/30646027/www.nvidia.com?p=eyJzIjoiUXBWZVNDVFZweDBZUXBqVTBONkJKcGg0WXA0IiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm52aWRpYS5jb21cXFwvXCIsXCJpZFwiOlwiYmJlZjg3ZGRiOWE3NDA4MmJjNDNlZGUxYjdlZWMyNzJcIixcInVybF9pZHNcIjpbXCI3YmJhMmU5NTI4NDdlMjcyNzA3MWRjZGQ2ZDI4ZWZkY2MzMjA1ZDk0XCJdfSJ9" style="color: #666666; text-decoration: none;" target="_blank" rel="noopener noreferrer" title="NVIDIA"><img src="http://info.nvidia.com/rs/156-OFN-742/images/nvidia-logo-150x50.png" alt="NVIDIA" style="margin: 0; padding: 0; border: 0;" id="nvidia-logo" constrain="true" imagepreview="false" width="150" height="50"></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 200px;" class="em_wrapper" width="200" cellspacing="0" cellpadding="0" border="0" align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="20"><img src="http://info.nvidia.com/rs/156-OFN-742/images/spacer.gif" alt="" style="mso-line-height: exactly; line-height: 15px; font-size: 1px;" width="1" height="1" border="0"></td>
+                                                                </tr>
+                                                                <tr></tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div></div>
+                    </div>
+                    <!--end snippet-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Header Logo End --> <!-- Sub Icon STARTS -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#80bd01">
+        <tbody>
+            <tr>
+                <td align="center" valign="top">
+                    <table width="680" border="0" cellspacing="0" cellpadding="0" align="center" style="table-layout: fixed;" class="em_main_table">
+                        <tbody>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper" style="width: 600px;">
+                                        <tbody>
+                                            <tr>
+                                                <td height="1" style="border-bottom: 2px solid #80bd01; line-height: 0px;"><img src="http://info.nvidia.com/rs/156-OFN-742/images/spacer.gif" width="1" height="1" alt=" " style="display: block;" border="0"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Sub Icon ENDS -->
+    <table style="width: 100%;" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+            <tr>
+                <td class="mktoContainer" id="MainContainer">
+                    <table class="mktoModule" id="Module12FullWidthTextNoCTAdcbef793-fe4f-40cf-ae8d-d7aa4b718808" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff;" bgcolor="#ffffff">
+                        <tbody>
+                            <tr>
+                                <td align="center" data-nl-format="datetime">
+                                    <table width="680" border="0" cellspacing="0" cellpadding="0" align="center" style="table-layout: fixed;" class="em_main_table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="em_aside1" style="padding: 60px 40px 60px 40px;" align="center" valign="top">
+                                                    <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper" style="width: 600px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center" valign="top" class="mktoText" id="Module12FullWidthTextNoCTACopyBlockdcbef793-fe4f-40cf-ae8d-d7aa4b718808">
+                                                                    <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="width: 600px;" class="em_wrapper">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="em_font" style="color: #1a1a1a; font-family: 'DINPro-Regular', Trebuchet MS, Arial, Helvetica, Sans-Serif; font-size: 16px; line-height: 24px;">
+                                                                                    Hello,<br><br>
+                                                                                    Your account just logged in using a(n) Mac device we haven't seen you use recently. Click the link below to verify this was you and continue to NVIDIA Account Portal. If this wasn't you please change your GOOGLE password.<br>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="30"><img src="http://info.nvidia.com/rs/156-OFN-742/images/spacer.gif" width="1" height="1" alt=" " style="display: block;" border="0"></td>
+                                                                            </tr>
+                                                                   
+                                                                            <tr>                                                                           
+                                                                                <td class="text-block">
+                                                                                    <!--BUTTON START-->
+                                                                                    <table class="text-block" border="0" bgcolor="#76b900" cellpadding="0" cellspacing="0" style="border: 1px solid #76b900;">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td align="center" class="em_font" valign="middle" style="color: #ffffff; font-family: 'DINPro-Regular', Arial, Helvetica, Sans-Serif; font-size: 14px; font-weight: bold; padding: 13px 21px 13px 21px; text-transform: uppercase; letter-spacing: 1px;">
+                                                                                                    <a href="https://login.nvgs.nvidia.com/v1/nfactor/email-auth?code=D7445F1ThHUlunhUhlUgykJlmubkgzSU0aBf7S-bHDONRzskwib3sAr_iVfkeK6J.MTAwOTU1Mzc1NTM2Njg3NTEzNg==&theme=Bright&locale=en-US" style="text-decoration: none; color: #ffffff; display: block;">VERIFY EMAIL ADDRESS</a>
+                                                                                                        
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <!--BUTTON END-->
+                                                                                </td>
+                                                                                                                                                 
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="30"><img src="http://info.nvidia.com/rs/156-OFN-742/images/spacer.gif" width="1" height="1" alt=" " style="display: block;" border="0"></td>
+                                                                            </tr>
+                                                                        
+                                                                        </tbody></table></td></tr>
+                                                                        <tr>
+                                                                            <td class="em_font" style="color: #1a1a1a; font-family: 'DINPro-Regular', Trebuchet MS, Arial, Helvetica, Sans-Serif; font-size: 16px; line-height: 24px;">
+                                                                                
+                                                                                <div>
+                                                                                    <strong>Location:</strong>
+                                                                                    Austin</div><br>
+                                                                                <div>To protect your privacy we do not store the specific location. Southern Central US is the location that will be retained for future reference.</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+            
+        
+    
+    <!--Full width table End-->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0">
+        <tbody>
+            <tr>
+                <td align="center" valign="top">
+                    <table width="680" border="0" cellspacing="0" cellpadding="0" align="center" style="table-layout: fixed;" class="em_main_table">
+                        <tbody>
+                            <tr>
+                                <td class="em_aside1" style="padding: 30px 30px 30px 30px;" align="center" valign="top">
+                                    <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper" style="width: 600px;">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <!--snippet-->
+                                                    <div class="mktoSnippet" id="NvidiaSubheading">
+                                                    </div>
+                                                    <!--end snippet-->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Footer Start -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+        <tbody>
+            <tr>
+                <td align="center" valign="top" style="padding: 0px 10px 0px 10px;">
+                    <!--snippet-->
+                    <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper em_font" style="width: 600px;">
+                        <tbody class="em_wrapper em_font">
+                            <tr>
+                                <td class="em_spc_20" height="60"><img src="http://info.nvidia.com/rs/156-OFN-742/images/spacer.gif" width="1" height="1" alt=" " style="display: block;" border="0"></td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="em_font" style="color: #666666; font-family: 'DINPro-Regular', Trebuchet MS, Arial, Helvetica, Sans-Serif; font-size: 11px; line-height: 20px; letter-spacing: 1px; text-decoration: none; display: block;"><a href="http://tmailclick.nvidia.com/track/click/30646027/profile.nvidia.com?p=eyJzIjoiT25MejhNamlMTWRCSDZhc0FMYUYxd09mMU9VIiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3Byb2ZpbGUubnZpZGlhLmNvbVxcXC9lbi11c1xcXC9zdWJzY3JpcHRpb25zXFxcL3Vuc3Vic2NyaWJlLWZyb20tYWxsXCIsXCJpZFwiOlwiYmJlZjg3ZGRiOWE3NDA4MmJjNDNlZGUxYjdlZWMyNzJcIixcInVybF9pZHNcIjpbXCI3OTNiMzVmZTdiOGFjYmU0NzgxZThlYWViNjA3ZjllNzBkNTk1MDU5XCJdfSJ9" class="em_font" style="color: #666666; text-decoration: none;" target="_blank" rel="noopener noreferrer">Unsubscribe</a> | <a href="http://tmailclick.nvidia.com/track/click/30646027/www.nvidia.com?p=eyJzIjoiRHNsaVV6S1BLWUd6UmNJcWs3bkxJQkF3UXhzIiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5udmlkaWEuY29tXFxcL2VuLXVzXFxcL3ByZWZlcmVuY2VzXFxcL2hhdmUtYWNjb3VudFxcXC9cIixcImlkXCI6XCJiYmVmODdkZGI5YTc0MDgyYmM0M2VkZTFiN2VlYzI3MlwiLFwidXJsX2lkc1wiOltcIjJlNWJhMWQ1ZDIwMzEwMzQ4MjM0MDU0ZjM1NDBkYTBkYTgxYmRiNzhcIl19In0" class="em_font" style="color: #666666; text-decoration: none;" target="_blank" rel="noopener noreferrer">Manage Preferences</a> | <a href="http://tmailclick.nvidia.com/track/click/30646027/www.nvidia.com?p=eyJzIjoieXpTWXBucmkyeTBORnpIaVdwYTVFcklCdWJFIiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5udmlkaWEuY29tXFxcL2VuLXVzXFxcL2NvbnRhY3RcXFwvXCIsXCJpZFwiOlwiYmJlZjg3ZGRiOWE3NDA4MmJjNDNlZGUxYjdlZWMyNzJcIixcInVybF9pZHNcIjpbXCI4ODk0YTg1YmFjYjQzYjI4Y2I2YWIwM2E0YTE2YTJiNjZhN2Y4ZWMxXCJdfSJ9" target="_blank" rel="noopener noreferrer" class="em_font" style="color: #666666; text-decoration: none;">Contact Us</a> | <a href="http://tmailclick.nvidia.com/track/click/30646027/privacy.nvidia.com?p=eyJzIjoiUDR6LWRnbVp5R1Q0bnFPV2FWS0VTM05ERFVRIiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvcHJpdmFjeS5udmlkaWEuY29tXFxcL1wiLFwiaWRcIjpcImJiZWY4N2RkYjlhNzQwODJiYzQzZWRlMWI3ZWVjMjcyXCIsXCJ1cmxfaWRzXCI6W1wiOWM2YjRlMDM4MWMxZjliNGFkMTg0MGZmYzllOGU5MThhMjgyZTVkYVwiXX0ifQ" style="color: #666666; text-decoration: none;" target="_blank" rel="noopener noreferrer" class="em_font">Privacy Center</a></td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="em_font" style="color: #666666; font-family: 'DINPro-Regular', Trebuchet MS, Arial, Helvetica, Sans-Serif; font-size: 11px; line-height: 24px; letter-spacing: 1px;">© 2022 NVIDIA Corporation. All rights reserved.</td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="em_font" style="color: #666666; font-family: 'DINPro-Regular', Trebuchet MS, Arial, Helvetica, Sans-Serif; font-size: 11px; line-height: 24px; letter-spacing: 1px;">NVIDIA Corporation, 2788 San Tomas Expressway, Santa Clara, CA 95051.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--end snippet-->
+                </td>
+            </tr>
+            <tr>
+                <td class="em_spc_20" height="30"><img src="http://info.nvidia.com/rs/156-OFN-742/images/spacer.gif" width="1" height="1" alt=" " style="display: block;" border="0"></td>
+            </tr>
+            <tr>
+                <td valign="top" align="center"><a href="http://tmailclick.nvidia.com/track/click/30646027/www.nvidia.com?p=eyJzIjoiUXBWZVNDVFZweDBZUXBqVTBONkJKcGg0WXA0IiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm52aWRpYS5jb21cXFwvXCIsXCJpZFwiOlwiYmJlZjg3ZGRiOWE3NDA4MmJjNDNlZGUxYjdlZWMyNzJcIixcInVybF9pZHNcIjpbXCI3YmJhMmU5NTI4NDdlMjcyNzA3MWRjZGQ2ZDI4ZWZkY2MzMjA1ZDk0XCJdfSJ9" style="color: #666666; text-decoration: none;" target="_blank" rel="noopener noreferrer" title="NVIDIA"><img src="http://info.nvidia.com/rs/156-OFN-742/images/NVIDIA-Logo-GTC-small.jpg" alt="NVIDIA" style="margin: 0; padding: 0; border: 0;" id="nvidia-logo" constrain="true" imagepreview="false" width="103" height="32"></a></td>
+            </tr>
+            <tr>
+                <td class="em_spc_20" height="60"><img src="http://info.nvidia.com/rs/156-OFN-742/images/spacer.gif" width="1" height="1" alt=" " style="display: block;" border="0"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Footer End -->
+<img src="http://tmailclick.nvidia.com/track/open.php?u=30646027&id=bbef87ddb9a74082bc43ede1b7eec272" height="1" width="1"></body>
+</html>

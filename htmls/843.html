@@ -1,0 +1,470 @@
+<html><body><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- modified from https://github.com/TedGoas/Cerberus/blob/94a5d0056791e06d29775c051df089f943beb211/cerberus-fluid.html -->
+    <!-- this layout is used in SendGrid's template system, and saved here in version control for reference -->
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <!-- <title>Splitwise</title> --> <!-- The title tag shows in email notifications, like Android 4.4, but I can't
+                                             immediately get it working with SendGrid. -Ryan -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <style>
+            * {
+                font-family: Lato, sans-serif !important;
+            }
+        </style>
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+    
+      <!-- CSS Reset -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+        
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        /* What is does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+        
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+                
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto; 
+        }
+        
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+        
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        .mobile-link--footer a,
+        a[x-apple-data-detectors] {
+            color:inherit !important;
+            text-decoration: underline !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+      
+    </style>
+    
+    <!-- Progressive Enhancements -->
+    <style>
+        
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #e23a00 !important;
+            border-color: #e23a00 !important;
+        }
+        
+        .mobile-only {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .desktop-only {
+                display: none !important;
+            }
+            .mobile-only {
+                display: block !important;
+            }
+        }
+    </style>
+
+</head>
+<body width="100%" bgcolor="#eeeeee" style="margin: 0; mso-line-height-rule: exactly;">
+    <center style="width: 100%; background: #eeeeee;">
+        <!--    
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+        <div style="max-width: 600px; margin: auto;">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Header : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+                <tr>
+                    <td style="padding: 20px 0; text-align: center">
+                        <img src="https://dx0qysuen8cbs.cloudfront.net/assets/email/templates/2019_modern/header_logo_horizontal@2x.png" width="111" height="38" alt="Splitwise" border="0" style="height: auto; background: #eeeeee; font-family: sans-serif; font-size: 15px;line-height: 20px; color: #555555">
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Header : END -->
+            
+            <!-- Email Body : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 30px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+
+                                      <div class="preheader" style="color: transparent; display: none; font-size: 1px; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
+      November is over. <strong>Here’s what’s up</strong> in your account on Splitwise:
+
+  </div>
+  <!-- Insert &zwnj;&nbsp; hack after hidden preview text -->
+  <div style="color: transparent; display: none; font-size: 1px; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
+    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+
+
+
+
+<p style='text-align: center'>November is over. <strong>Here’s what’s up</strong> in your account on Splitwise:</p>
+<br>
+<div class="desktop-only">
+  <table cellspacing='0' style='border-spacing: 0; border-collapse: collapse; max-width: 560px; width: 100%'>
+    <tr style="height: 1px">
+      <!-- this first tr is a hack to make width work properly in more browsers -->
+      <td style='width: 40px'></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan='2' valign='top' style='padding-bottom:5px; border-bottom: 1px solid #ddd; font-weight: bold; font-size: 20px; line-height: 30px'>
+        Total balance
+      </td>
+
+      <td valign='top' style='padding-bottom:5px; border-bottom: 1px solid #ddd; font-size: 20px; text-align: right; color: #ff5216; line-height: 30px'>
+            <div style='color: #3ba889; font-size: 20px; text-align: right'>
+              <span style='font-size: 16px'>
+                you are owed
+              </span>
+
+              <strong>$1,342.64</strong>
+            </div>
+      </td>
+    </tr>
+
+    <tr>
+  <td style='padding-top: 10px; width: 40px; line-height: 30px' valign='top'>
+    <img src='https://s3.amazonaws.com/splitwise/uploads/user/default_avatars/avatar-blue24-100px.png' height='28' width='28' style='border-radius: 15px; border: 1px solid #ddd; vertical-align: middle'>
+  </td>
+
+  <td style='padding-top: 10px; line-height: 30px; font-size: 16px' valign='top'>
+    <a style="color: inherit; text-decoration: none" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49dEVtDTmoSu0X5IGz1W-2FY7DjobNkfaAk-2Faic4yKftPy7g-3D-3DMNlE_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmSxQ0KLWwRXrSpmnsVQOkxlKM3FFUUDmlj4t9njy-2F7USk5rQR6boh9Mxxxjz7yKiNjQqqMdxo5aVVq24ndrFfRakQ7mRYnEDNN03-2Bfxi1mfYz2DXBJG0dRtiPi7kOcpNqNjGZCJl9kqG8zjRLM-2Flm8F8Lf98eRk6vZMsMQwgCRnUb-2BnrpjwWG0d9dkF2SSz8GISOdOXq0ugbjO7gIA0qU7T9y96KZc-2Bf3a2lQcnvdtMkg-3D-3D">Keyan Huang</a>
+  </td>
+
+  <td style='padding-top: 14px; line-height: 20px' valign='top'>
+      <div style='color: #3ba889; font-size: 16px; text-align: right'>
+        <span style='font-size: 14px'>
+          owes you
+        </span>
+
+        <strong>$1,342.64</strong>
+      </div>
+  </td>
+</tr>
+
+
+
+    <tr>
+      <td colspan='3' style='padding-top: 10px'>
+        <a style="color: #999; font-size: 14px" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj0yEX__2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmT9vod9v-2BRuG-2BAm0KbMEln1PWsZd3jm-2BgWNceiJ36rKQki8534re5u2DIIW6ktW1rgCME6adS36ThHWWrpIE-2F0WOnwqka31pKTsZP-2F1yUFz1KnLz5joykBDikFUdUNW2bpbYQMcoqSj5MeEhmtcAh2P8jIjs-2Ft-2FE-2FIeYpJVOV3n-2FytSPMXoBcHxrM3CLOap5QBSpWsZIHucoqaP4MNic5lxh0F4W1wpqC1-2BxQiLrQKe8Q-3D-3D">See all friends »</a>
+      </td>
+    </tr>
+  </table>
+
+    <br>
+    <br>
+
+    <table cellspacing='0' style='border-spacing: 0; border-collapse: collapse; max-width: 560px; width: 100%'>
+      <tr style="height: 1px">
+        <!-- this first tr is a hack to make width work properly in more browsers -->
+        <td style='width: 40px'></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td valign='top' colspan='3' style='padding-bottom: 5px; border-bottom: 1px solid #ddd; font-weight: bold; font-size: 20px; line-height: 30px'>
+          Largest expenses
+
+        </td>
+      </tr>
+
+      <tr>
+  <td style='padding-top: 11px; width: 30px; padding-right: 3px' valign='top'>
+    <div style='font-size: 12px; color: #aaa; line-height: 14px; text-align: center; width: 30px'>
+      Nov.<br>23
+    </div>
+  </td>
+
+  <td style='padding-top: 10px' valign='top'>
+    <div style='width: 100.0%; height: 20px; padding: 5px 0; background: #d8f1ea; white-space: no-wrap; overflow: visible'>
+      <a style="color: inherit; text-decoration: none; white-space: nowrap; line-height: 20px; padding: 0 5px; font-size: 16px" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj09Sgq_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmRLyxF363Fvr2WmpqCu-2BnShUEcWIsZBYPeaUrx4ys-2Fs5nb-2B8et7rQqbDS2Qy8zCaWIjAJJTIJ7wd-2FErncDNI3Gwp5tnpCpYWbRevRD81mxVU0oSjpIirEGQfliiBK6O8PXk3LPgv5kNpQu5s5V3UxKcDQuanGaqQiaonLfRZePVNPRKsvShVAsHXP0PPuYYHFFRldDAqGNts6e6vk2JzE3if1xtlp4pzAIse8Zc20hQVA-3D-3D">Genie plus and fast lane</a>
+    </div>
+  </td>
+
+  <td style='text-align: right; padding: 10px 0 0 20px; width: 40px; line-height: 30px; white-space: nowrap; color: #3ba889' valign='top'>
+    <span style='font-size: 14px; white-space: nowrap'>
+      you lent
+    </span>
+
+    <strong style='font-size: 16px'>
+      $112.90
+    </strong>
+  </td>
+</tr>
+<tr>
+  <td style='padding-top: 11px; width: 30px; padding-right: 3px' valign='top'>
+    <div style='font-size: 12px; color: #aaa; line-height: 14px; text-align: center; width: 30px'>
+      Nov.<br>23
+    </div>
+  </td>
+
+  <td style='padding-top: 10px' valign='top'>
+    <div style='width: 21.4260407440212577502214349%; height: 20px; padding: 5px 0; background: #ffe3d9; white-space: no-wrap; overflow: visible'>
+      <a style="color: inherit; text-decoration: none; white-space: nowrap; line-height: 20px; padding: 0 5px; font-size: 16px" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj0o3HD_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmSmUEAJTK9hB72GdAEVpHBEwrPJ7bCGsTWZ5kPS4-2FvMM2rcvmgdU21nSec98xPKpFP86h9rxPWAcWNsw-2Fdw7FNb9rRfStCeh-2B-2FKcrO3ceztKhyIPB28sUq3-2F4C0cKKBTYhBxuK8ImwyTUZEOnFS5oY3xpkDBps0M4-2B4-2BCryFTTCN1uixX-2B-2FyFIF9HpgW15-2F4fmmcLVr8Jx51dgFHdhC0pDRIIpKDcvFRheK-2BQBO-2FjiU4w-3D-3D">Grocery</a>
+    </div>
+  </td>
+
+  <td style='text-align: right; padding: 10px 0 0 20px; width: 40px; line-height: 30px; white-space: nowrap; color: #ff5216' valign='top'>
+    <span style='font-size: 14px; white-space: nowrap'>
+      you borrowed
+    </span>
+
+    <strong style='font-size: 16px'>
+      $24.19
+    </strong>
+  </td>
+</tr>
+<tr>
+  <td style='padding-top: 11px; width: 30px; padding-right: 3px' valign='top'>
+    <div style='font-size: 12px; color: #aaa; line-height: 14px; text-align: center; width: 30px'>
+      Nov.<br>23
+    </div>
+  </td>
+
+  <td style='padding-top: 10px' valign='top'>
+    <div style='width: 21.2577502214348981399468556%; height: 20px; padding: 5px 0; background: #d8f1ea; white-space: no-wrap; overflow: visible'>
+      <a style="color: inherit; text-decoration: none; white-space: nowrap; line-height: 20px; padding: 0 5px; font-size: 16px" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj0mq4e_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmSjyDeTMQxPj9DBPJmURDPuuwGGXF1GBakoq82-2BUuCi6NwF0zNuBHMSy-2F7zhRLI7CpTBmI2yz0trqNBvxw89wlhhLlgxl-2FCck4sGqyz6UauvdmzASajFEzlIuAmR6tPfUR76mNQIdpE0WElcZNXvdyCAFGYUTsZ1jwxyv2UluWO1udVsCAIgskIe99gQed-2BgqtFoCdXQC3vhOgDOvBt6tXYekZyKNhbIybr48Dd8y1v8Q-3D-3D">玩偶games</a>
+    </div>
+  </td>
+
+  <td style='text-align: right; padding: 10px 0 0 20px; width: 40px; line-height: 30px; white-space: nowrap; color: #3ba889' valign='top'>
+    <span style='font-size: 14px; white-space: nowrap'>
+      you lent
+    </span>
+
+    <strong style='font-size: 16px'>
+      $24.00
+    </strong>
+  </td>
+</tr>
+<tr>
+  <td style='padding-top: 11px; width: 30px; padding-right: 3px' valign='top'>
+    <div style='font-size: 12px; color: #aaa; line-height: 14px; text-align: center; width: 30px'>
+      Nov.<br>23
+    </div>
+  </td>
+
+  <td style='padding-top: 10px' valign='top'>
+    <div style='width: 20.7528786536758193091231178%; height: 20px; padding: 5px 0; background: #ffe3d9; white-space: no-wrap; overflow: visible'>
+      <a style="color: inherit; text-decoration: none; white-space: nowrap; line-height: 20px; padding: 0 5px; font-size: 16px" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj0KEWY_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmS0I-2F3kWzpqNVVHwUuTP1Rs8ThZ7-2FscQf3ys9LbyRUo9X-2FhTkT4plSpPbstKHFaNlxqiwWc0NiRdt9V1BGopvazh-2FclTRwbc3Ph0miP3B-2BviPlogjjYzw15ZO3PTWJ4NX0rHhaS8HZGVyqd1LOxpBU1agiwCuCIE2XtdKlX0U-2F-2F5wMag7ecTYW5yy5bspyJ8AAoEgvyDV6xhGgEO-2BybrejW0Y72YurSChSIM9-2Bp2r-2BUPQ-3D-3D">LL day2</a>
+    </div>
+  </td>
+
+  <td style='text-align: right; padding: 10px 0 0 20px; width: 40px; line-height: 30px; white-space: nowrap; color: #ff5216' valign='top'>
+    <span style='font-size: 14px; white-space: nowrap'>
+      you borrowed
+    </span>
+
+    <strong style='font-size: 16px'>
+      $23.43
+    </strong>
+  </td>
+</tr>
+
+
+      <tr>
+        <td colspan='3' style='padding-top: 10px'>
+          <a style="color: #999; font-size: 14px" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj0sKSK_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmRUMA7ASwfydwnGwfASNQtm6iC8QkrRuw53qI0po1QKQ4XaEEgnrS1-2F8yQdc4ZaXSaXWtcmOyeHqD6FnSERip9RF90TEZPdBwDM7RXuMX3NznklPZGDd4f-2F8iC6kWk42iSsS-2FitSS6BnH89VvQLSi1GCDobRsuribuIfQuzSLi4aBv6HaPLCgGGoFx7sAbQ9qAKWXbjSrrhBXaeTvSVYkp9-2F33fPIvtdn1yavGnw25v5w-3D-3D">See all transactions »</a>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<div class="mobile-only" style="display: none">
+  <div style="font-weight: bold; font-size: 18px; padding-bottom: 0.5em">Total balance</div>
+    <div style="padding-bottom: 1em">
+        <span style='color: #3ba889; font-size: 18px'>
+          <span style='font-size: 16px'>
+            you are owed
+          </span>
+          <strong>$1,342.64</strong>
+        </span>
+        <br>
+    </div>
+
+  <div style="padding: 0.5em 0">
+  <img src='https://s3.amazonaws.com/splitwise/uploads/user/default_avatars/avatar-blue24-100px.png' height='28' width='28' style='border-radius: 15px; border: 1px solid #ddd; vertical-align: middle'>
+  <a style="color: inherit; text-decoration: none" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49dEVtDTmoSu0X5IGz1W-2FY7DjobNkfaAk-2Faic4yKftPy7g-3D-3DvNak_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmS9-2BWmKL4b3Taymq-2FO0KJ252rcbWymSeMY-2F-2BgJ-2Fp6U1xu5Po8STIJJryB6GHWrkHmaYptZwQnPPFZ0ljOYdT4if6wWsxFTg4pOx2sW6jHVQC5IpvyNPkIYRGP7I4y13rUhXZiZguMVtBgAlhz9Bh3tIx8vFoE5tKF-2BCz7Hx-2Bo2O0zm7fCe0aaz12Fi4PP6tJPGfgmBPpioYzq07ayeC-2BFeTshQejZ4SYQgbwfXc-2FNEBDg-3D-3D">Keyan Huang</a><br>
+    <div style='color: #3ba889; font-size: 16px'>
+      <span style='font-size: 14px'>
+        owes you
+      </span>
+      <strong>$1,342.64</strong>
+    </div>
+</div>
+
+  <div style="padding-top: 0.5em">
+    <a style="color: #999; font-size: 14px" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj071mz_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmQDWmz43kIaUiwRjZyhgDdplU8rac8oxf3LGkUdju-2BVuoB5NyYGGIunCDz7fQPRhfEFDccQp7hqcU1zTaAHv6Cstp-2Fx7DaT3lvwIBpDFKlq5jLzeeCqsZhr8qKzntzaDPVUsrJFiNU-2Fm82CP7aAoRvq0Ru7c7ZDFp2lFHohGSSv7XUYjKvlCxOM-2FBUqlEeXgBfpgLmVt2IOcA9mKBUzmGJKwsdTW2vEiA-2BiUr5UDu3vcA-3D-3D">See all friends »</a>
+  </div>
+
+    <br><br>
+    <div style="font-weight: bold; font-size: 18px; padding-bottom: 0.5em">Largest expenses</div>
+    <div style="font-size: 16px; padding: 0.5em 0">
+
+  <a style="color: inherit; text-decoration: none" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj09ugv_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmTW5g6tYDw1mApQuX76oX2SXrkgnd5MrgB8lqlYGKD2gggjy9YOOJAC22s0aKuhfvcHumF9bKFEOjd8U-2BJOYlLDA7-2FAzM23-2B5PHfOIuH5X5GHOJMa7FYV2Vy3HqIhyGAvETh2epBiuFHO8y9y1zOR3GP9X5Gjr-2FOP3gPrWLqE4Qry5OQkMMXFgXIP06OCw6oLwa8gsoSzQhdcp1u0fn1H7-2BBqK6mEKNSV9Ryv0kazIwuw-3D-3D">Genie plus and fast lane</a>
+  <span style='color: #999; font-size: 14px'>(Nov 23)</span><br>
+  <span style='color: #3ba889; font-size: 14px'>
+    you lent
+    <strong style='font-size: 16px'>$112.90</strong>
+  </span>
+</div>
+<div style="font-size: 16px; padding: 0.5em 0">
+
+  <a style="color: inherit; text-decoration: none" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj0m7cn_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmRD8viD1-2FPDDfS6yfYx1K-2BoWwHdyKfVF-2FY8nwvWpJeSEUtfIUSwARmxasdLukUtIuixRJiUz-2B0fOZALOLiCBk10Tacj8KJQOkMkNrWsgopSctlBFoCILK-2FLDP0DS743RejDY4t4I93iaxdFVTnW5VmWDu5er9HRDs16mr0G4Tpj-2B3CPcSzdg9GYJq1FgAZaV9UZReq-2BQ1Q-2Byu4dRxpr-2FvuI2Zq-2FhDm3xJz9eFRDabFAJw-3D-3D">Grocery</a>
+  <span style='color: #999; font-size: 14px'>(Nov 23)</span><br>
+  <span style='color: #ff5216; font-size: 14px'>
+    you borrowed
+    <strong style='font-size: 16px'>$24.19</strong>
+  </span>
+</div>
+<div style="font-size: 16px; padding: 0.5em 0">
+
+  <a style="color: inherit; text-decoration: none" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj00CqQ_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmQ4PQwhGGtI08Oi7QiHnImmBuLp6iq10KmY9xL4WO3jFyu49fZnwKobFpxyQ-2Bzhd2NgienGm-2B-2BIbnx2GZ8yBn6N-2BnfFAUZA8U53UxIv448dk0T-2BkytUopBhKcaTzpJ9q7TNrmzuLMwxNdEuoK8tcYZwccZ1wTArp1XGNDsaqArfLdw4OmaTLv6SBduzrnQJ-2BI0qvhJeFUjpxwGf0Yw6AkwnR-2FG-2FW-2B5LjrlEXGN65Y57Lw-3D-3D">玩偶games</a>
+  <span style='color: #999; font-size: 14px'>(Nov 23)</span><br>
+  <span style='color: #3ba889; font-size: 14px'>
+    you lent
+    <strong style='font-size: 16px'>$24.00</strong>
+  </span>
+</div>
+<div style="font-size: 16px; padding: 0.5em 0">
+
+  <a style="color: inherit; text-decoration: none" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj0bCX6_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmREflkePLc7vSCm3kCCOrVnGpjDYS8mJaWHFu-2BPmqEWRBpvGsQdMhTPwM1ZralHEOfQSNnxmTSGvxwm7TyqUew0gC-2BfZmcIMAr4BI-2BhhYg6DTsAnNpeMrmldgAn3e1qR8MiI6ryXSppX4OvRG8tKH3BJlfidSLphuOwNjQWVg3q3vAXkbGoDC3olbhkHpwfyFZBY1qU1TNTlPsNbkzRyDRAkoVTGbJtL3zlyBiETIiEBg-3D-3D">LL day2</a>
+  <span style='color: #999; font-size: 14px'>(Nov 23)</span><br>
+  <span style='color: #ff5216; font-size: 14px'>
+    you borrowed
+    <strong style='font-size: 16px'>$23.43</strong>
+  </span>
+</div>
+
+    <div style="padding-top: 0.5em">
+      <a style="color: #999; font-size: 14px" href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49eAAmcxOGELdlMiJZzEDrj0bhyH_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXd1WwiVoQgkNtoEtYPEfXHCIebyuoPGhF4XjUZ2oXVmS7dH-2FdyFLyOdec6o3K5efvGY93Raa86rTlKUl-2B6n3QzPSWT1FAEksw092JXggUSrqQPajeCzk8-2BFp7gMBPdgbTmjsNHp-2F1iTuyH6xjxvSKcwn4nP1b9e8LUl4Q0h-2Bv1-2F4zr-2F1TMBzmA9IAMaWNohR-2BrBxRpAS1UhMWMDKf0u-2FE24gxDoiyYC4wtIZR2TxnSleDFuKXYtXqBd3EX0n-2BGZrzj-2B2QJySAP3UKU-2FYZmNIsLg-3D-3D">See all transactions »</a>
+    </div>
+</div>
+
+<br>
+<br>
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+  <tr>
+    <td style="border-radius: 3px; background: #ff5216; text-align: center;" class="button-td">
+      <a clicktracking=off href="https://www.splitwise.com/applinks/open?tr=GaWCpfBxf4z" style="background: #ff5216; border: 16px solid #ff5216; border-right: 24px solid #ff5216; border-left: 24px solid #ff5216; font-family: sans-serif; font-size: 18px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
+        <span style="color:#ffffff;" class="button-link">Visit Splitwise now</span>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+<br>
+<p style='text-align: center'>
+  Have a great day! <span style="color: #999">&ndash;The Splitwise Team</span>
+
+</p>
+
+
+
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text + Button : END -->
+
+            </table>
+            <!-- Email Body : END -->
+          
+            <!-- Email Footer : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+                <tr>
+                    <td style="padding: 30px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;">
+                        Splitwise, Inc.<br><span class="mobile-link--footer">150 Union St, Suite 606</span><br><span class="mobile-link--footer">Providence, RI 02903 USA</span>
+                        <br><br>
+                        <a href="https://emails.splitwise.com/asm/unsubscribe/global/?user_id=256585&amp;data=EVRVkGJ44Z6GuNIAjSqIJcU8KpBkC2CqsevyVAcn-PhoMDAwdTAwMOa477E-R10Rs4J9TQm-H6z5yUXIOSxqPLcKKC2M-D-1QIT8C9S4eA2gqUmstAQe7hEYKlTNduHv-H_Ph1raSD95oz1jxKlXxWFDhS7QIYtlk12Z429g1fcsMroKvtj4rhD5oLHECucJAOgI6lZTJbdrrS0UT1xLCMwTv9g68pXSq3IupH6KIMjAbO_owAFnOSvrYhOHtYMgrmc3R1gey9EdF5RxDNZRAjsxWZrMxe-8LjjnaqtwaSavVNzVfUb4aSSf7OVRApNaAYs2KwbW7Hgf1riNvg7R9q674jCjFLRbK-w_FxECVWgoIy9tAko2bBrYBBhEoz1RJFWvaC4f-7gapB_KVIkNV19OvU-7mbe8viPytG5cs8vxsHJzaFarUAKicbVjKpbZePLLXXkbrk8i0Xjop92JXgG37bfpANAuVA7aVpQg5T9P_LkdPF125Q==" style="color:#888888; text-decoration:underline;">unsubscribe</a>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </center>
+
+<img src="https://emails.splitwise.com/wf/open?upn=GFd3-2BZ-2BwdFKn-2FmmJ2KvfVvpVNTBXCVkTQvfDE9kJ8ULQTqpzfLEivfxvxPpwEhdbQ9MmdIy5uNNr4rBX7Zmr-2Ba5x6bgjNCvqhOlA3iPDz528r1inkTkd-2BB3z6C1-2F0BydeVgVX-2BaO8mT8p85F3eUxvJQHQmux2jw7-2BiX3jmi0BIw2DOw3x1p0nkOZ7v4NUT4ifmmypqY-2FwCAym9NkL8u-2BZt8qO66OmvVjRfJxS0dhqrvsYb6odFe-2FxXuw81HeWK-2Fi1YWDbJ8VQxo1jzL3w5K9Ob4LeYh5QBOgNfrMLla3zeH-2FggwE8PCDXxbyJbIMGzq92iXaPXbImUj6P-2FEmj4j8sA-3D-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/></body></html>

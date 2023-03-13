@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+      /* FONTS */
+      @media screen {
+      @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v13/dPJ5r9gl3kK6ijoeP1IRsvY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v13/EsvMC5un3kjyUhB9ZEPPwg.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v13/UyBMtLsHKBKXelqf4x7VRQ.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v13/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/ObQr5XYcoH0WBoUxiaYK3_Y6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/H2DMvhDLycM56KNuAtbJYA.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 900;
+      src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v13/R4a6fty3waPci7C44H8AjvY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 900;
+      src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v13/tI4j516nok_GrVf4dhunkg.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 300;
+      src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v13/XNVd6tsqi9wmKNvnh5HNEBJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 300;
+      src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v13/2HG_tEPiQ4Z6795cGfdivFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v13/YMOYVM-eg6Qs9YzV9OSqZfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v13/PLygLKRVCQnA5fhu3qk5fQ.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v13/AcvTq8Q0lyKKNxRlL28RnxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v13/HkF_qI1x_noxlxhrhMQYEFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+      }
+   
+      @font-face {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Playfair Display'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v10/2NBgzUtEeyB-Xtpr9bm1CUR-13DsDU150T1bKbJZejI.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Playfair Display'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v10/2NBgzUtEeyB-Xtpr9bm1CfoVn-aGdXvQRwgLLg-TkDk.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Playfair Display'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v10/2NBgzUtEeyB-Xtpr9bm1Cdhy5e3cTyNKTHXrP9DO-Rc.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+      }
+      }
+      /* CLIENT-SPECIFIC STYLES */
+      body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      img { -ms-interpolation-mode: bicubic; }
+      /* RESET STYLES */
+      img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+      table { border-collapse: collapse !important; }
+      body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      }
+   .em_preheader a {
+   color:#9da0b1;
+   text-decoration:none;
+   }
+   .em_header a {
+   color:#76798a;
+   text-decoration:none;
+   }
+   .em_blk a {
+   color:#333333;
+   text-decoration:none;
+   }
+   .em_blk2 a {
+   color:#000000;
+   text-decoration:none;
+   }
+   .em_dkgray a {
+   color:#414155;
+   text-decoration:none;
+   }
+   .em_mdgray a {
+   color:#747487;
+   text-decoration:none;
+   }
+   .em_grayfooter a {
+   color:#828282;
+   text-decoration:none;
+   }
+   .em_red a {
+   color:#dd2b0d;
+   text-decoration:none;
+   }
+   .em_blue a {
+   color:#0E72ED;
+   text-decoration:none;
+   }
+   .em_wht a {
+   color:#ffffff;
+   text-decoration:none;
+   }
+      @media screen and (min-width: 601px) {
+      .container {
+      width: 600px !important;
+      }
+      }
+      /* MOBILE STYLES */
+      @media screen and (max-width:600px){
+      .em_wrapper {
+      width:100% !important;
+      }
+      .em_pad {
+      padding:40px 15px 40px 15px !important;
+      }
+      .em_p15 {
+      padding-bottom:15px !important;
+      }
+   .em_p25 {
+      padding-bottom:25px !important;
+      }   
+   .em_p40 {
+      padding-bottom:40px !important;
+      }   
+      .em_pad_1 {
+      padding: 0px 15px 10px 15px !important;
+      }
+      .em_pad_2 {
+      padding: 0px 15px 40px 15px !important
+      }
+      .em_brk {
+      display:block !important;
+      }
+      .em_hide {
+      display:none !important;
+      }
+      .em_center {
+      text-align:center !important;
+      }
+      .BodyCopy {
+      font-size: 16px !important; 
+      line-height: 24px !important; 
+      } 
+      .column {
+       width:100%;
+      }    
+  
+    
+      /* BR STYLES */
+    
+  .em_d20 {
+    height: 20px;
+   }
+    
+   .em_d40 {
+    height: 40px;
+   }  
+    
+  .img-max {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  }
+
+  .mobile-first {display: table-header-group !important;}
+  .mobile-intermediate {display: table-row !important;}
+  .mobile-last {display: table-footer-group !important;}   
+
+  .mobile-center {
+  display: table !important;
+  float: none;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  }  
+
+  .mobile-full-width {
+  display: table;
+  width: 100%;
+        }
+      
+        .mobile-cta {
+        padding: 20px 25px !important;
+        font-size:14px !important;
+        }
+  .mobile-padding {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        }
+        .mobile-header-padding {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        }  
+        .signInButton {
+        font-size:10px !important;
+        padding: 7px 10px !important;
+        }  
+        h1 {
+         font-size: 30px !important;
+            line-height: 1.2 !important;
+        }  
+ 
+      }
+      /* ANDROID CENTER FIX */
+      div[style*="margin: 14px 0;"] { margin: 0 !important; }
+    </style>
+  
+</head>
+  <body style="background-color: #EEEEEE; margin: 0 !important; padding: 0 !important;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Enjoy unlimited group meetings on Zoom!</div>
+<!-- Preheader -->
+<div style="display: none; font-size: 1px; color: #EEEEEE; line-height: 1px; font-family: Lato, Helvetica, Helvetica, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Enjoy unlimited group meetings on Zoom!</div>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody>
+  <tr>
+   <td align="center" valign="top"><!--[if (gte mso 9)|(IE)]>           <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">             <tr>               <td align="center" valign="top" width="600">                 <![endif]-->
+   <table align="center" border="0" cellpadding="0" cellspacing="0" class="container" style="max-width:600px;" width="100%"><!-- Navigation -->
+    <tbody>
+     <tr>
+      <td align="center" valign="top"><!--[if (gte mso 9)|(IE)]>        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">       <tr>         <td align="center" valign="top" width="600">        <![endif]-->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
+       <tbody>
+        <tr>
+         <td align="left" bgcolor="#FFFFFF" style="font-size:0; padding-top:0px;" valign="top" class=""><!--[if (gte mso 9)|(IE)]>           <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">          <tr>            <td align="left" valign="top" width="600">           <![endif]-->
+         <div style="display:inline-block; max-width:600px; vertical-align:top; width:100%;">
+         <table align="left" bgcolor="#2d8cff" border="0" cellpadding="0" cellspacing="0" style="" width="100%">
+          <tbody>
+           <tr>
+            <td align="left" style="padding: 20px 30px" valign="middle" class=""><a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f3c994d322f57687e75d5784a18686f1058f2a0696edf240b492cb42670b9afb4b2bf852d8b3243128ac293c64bbda185ff621e88d7010ca03" style="text-decoration:none;" target="_blank"><img alt="Zoom Logo" border="0" src="http://click.zoom.us/l/84442/2020-05-20/blf6y3/84442/140394/zoom_logo_white.png" style="display:block; font-family:'Lato', Helvetica, sans-serif; font-size:18px; line-height:22px; color:#76798a; font-weight:bold; width:100%; max-width: 100px" width="100"> </a></td>
+            <td align="right" style="padding: 20px 30px" valign="top" class=""><a alt="Sign In" href="https://click.e.zoom.us/?qs=d85fa32efa1b17f3aba7386e40b227a014b11ea6a12911c51500e98144eeac68b5819104313bdb801d206d32bee5e8fbef91099de3bce6abefb29d5965ad8bdb" style="text-decoration:none;" target="_blank"><img src="http://click.zoom.us/l/84442/2020-05-18/bldcsk/84442/140388/sign_in_button_accessible.png" style="max-width: 125px; width:100%" width="125"></a></td>
+           </tr>
+          </tbody>
+         </table>
+         </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <!--[if (gte mso 9)|(IE)]>         </td>       </tr>        </table>        <![endif]--></td>
+     </tr>
+     <!-- HEADER -->
+     <tr>
+      <td align="center" bgcolor="#FFFFFF" style="" valign="top">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
+       <tbody>
+        <tr>
+         <td class="mobile-padding" style="padding:40px 30px 10px;">
+                                        <h1 style="font-family:'Lato', Helvetica, sans-serif; font-size:38px; line-height:42px; color:#232333; font-weight:900; letter-spacing: 0.01em; margin: 0; text-align: center;">Running out of Time?</h1>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
+       <tbody>
+        <tr>
+         <td align="center" class="mobile-padding" style="padding: 0px 30px 30px 30px; display: block" valign="top"><img src="http://click.zoom.us/l/84442/2020-05-20/blf6y1/84442/140392/title_marker_40x8.png" style="width:100%; max-width: 40px;" width="40"></td>
+        </tr>
+                                <tr>
+                                    <td align="center" colspan="" style="padding: 0px 30px 40px 30px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" class="BodyCopy mobile-padding"><div style="max-width: 450px; margin: 0 auto;">Ditch the 40-minute limit when you upgrade to Pro. For a limited-time <strong><a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f399f2c2a9c37cd02e48d4bde2cd1445fc20c3f3c9d0104d842be6e06031b2c2de62d61b45b0aa8ec4377426311d512b4c7733d43c701a1340" style="color: #2d8cff; text-decoration: none">save 30% off your first year.</a></strong></div>
+</td>
+        </tr>
+                                <!-- CTA -->
+                                <tr>
+                                    <td align="center" style="padding-bottom: 30px" valign="top">
+                                        <table bgcolor="#FF5F0F" style="border-radius:3px; border-spacing:0; margin:0 auto">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="mobile-cta" style="border: 0 solid #FF742E;  display: inline-block; padding: 20px 45px; text-align: center; font-family:'Lato', Helvetica, sans-serif; font-size:15px; line-height:24px; color:#FFFFFF; font-weight:900; text-decoration: none; text-transform: uppercase; letter-spacing: .2em">
+                                                        <a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f399f2c2a9c37cd02e48d4bde2cd1445fc20c3f3c9d0104d842be6e06031b2c2de62d61b45b0aa8ec4377426311d512b4c7733d43c701a1340" style="color:#FFFFFF; text-decoration: none" target="_blank">EXTEND MY TIME</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End CTA -->
+       </tbody>
+      </table>
+
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
+       <tbody>
+        <tr>
+         <td class="mobile-padding" style="padding:0px 0px 40px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#747487; font-weight:400; text-align: center"><a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f399f2c2a9c37cd02e48d4bde2cd1445fc20c3f3c9d0104d842be6e06031b2c2de62d61b45b0aa8ec4377426311d512b4c7733d43c701a1340" target="_blank"><img alt="A stopwatch stopping at the 40 minute mark" height="auto" src="http://click.zoom.us/l/84442/2022-03-14/c3my6j/84442/1647298178NlhtbSZ4/stopwatch_40_minute.gif" style="width:100%; max-width: 600px; height:auto; padding-bottom: 40px" width="600" height="auto" height="338"><!--
+<img alt="A pattern of animated stopwatches stopping at the 40 minute mark" height="auto" src="http://click.zoom.us/l/84442/2022-03-14/c3my6d/84442/1647294986AoEncvMI/stopwatch_40_minute_wallpaper.gif" style="width:100%; max-width: 600px; height:auto" width="600" height="auto" height="338">--></a></td>
+        </tr>
+       </tbody>
+      </table>
+      </td>
+     </tr>
+     <!--END HEADER-->
+                    <!--Checklist-->
+                    
+<tr>
+      <td class="mobile-padding" align="center" bgcolor="#ffffff" style="padding:0px 30px 60px 30px;" valign="top">
+      <table width="100%">
+                            
+                            <tr>
+         <td align="left" colspan="1" style="padding: 0px 30px 40px 30px; font-family:'Lato', Helvetica, sans-serif; font-size:20px; line-height:24px; font-weight:700; color:#232333; text-align: center; text-transform: uppercase; letter-spacing:0.05em;" class="mobile-padding">Experience the Power of Pro</td>
+        </tr>
+          <tr>
+         <td align="center" colspan="" style="padding: 0px 30px 40px 30px; font-family:'Lato', Helvetica, sans-serif;  font-size:20px; line-height:28px; font-weight:900; color:#232333; text-align: center; letter-spacing:0.05em;" class="BodyCopy mobile-padding">New features that never get old.
+</td>
+        </tr>
+                            </table>
+                        <!-- Column 1 -->    
+                        <table class="em_wrapper" align="left" border="0" cellpadding="0" cellspacing="0" style="" width="265">
+       <tbody>
+                                <tr>
+         <td align="left" class="BodyCopy" style="padding-bottom: 15px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; font-weight:400; color:#747487; letter-spacing: .01em" valign="top" width="30"><img src="http://click.zoom.us/l/84442/2020-10-16/bm3j5f/84442/1602887939omfO00AU/green_check_mark_72x72.png" alt="check" style="width:100%; max-width: 30px; vertical-align: middle" width="30"></td>
+         <td align="left" class="BodyCopy" style="padding:5px 25px 15px 0; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" valign="middle">No 40-minute limit</td>
+        </tr>
+                                <tr>
+         <td align="left" class="BodyCopy" style="padding-bottom: 15px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; font-weight:400; color:#747487; letter-spacing: .01em" valign="top" width="30"><img src="http://click.zoom.us/l/84442/2020-10-16/bm3j5f/84442/1602887939omfO00AU/green_check_mark_72x72.png" alt="check" style="width:100%; max-width: 30px; vertical-align: middle" width="30"></td>
+         <td align="left" class="BodyCopy" style="padding:5px 25px 15px 0; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" valign="middle">Unlimited meetings for groups of 3 or more</td>
+        </tr>
+                                <tr>
+         <td align="left" class="BodyCopy" style="padding-bottom: 15px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; font-weight:400; color:#747487; letter-spacing: .01em" valign="top" width="30"><img src="http://click.zoom.us/l/84442/2020-10-16/bm3j5f/84442/1602887939omfO00AU/green_check_mark_72x72.png" alt="check" style="width:100%; max-width: 30px; vertical-align: middle" width="30"></td>
+         <td align="left" class="BodyCopy" style="padding:5px 25px 15px 0; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" valign="middle">Record to the cloud</td>
+        </tr>
+                                <tr>
+         <td align="left" class="BodyCopy" style="padding-bottom: 15px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; font-weight:400; color:#747487; letter-spacing: .01em" valign="top" width="35"><img src="http://click.zoom.us/l/84442/2020-10-16/bm3j5f/84442/1602887939omfO00AU/green_check_mark_72x72.png" alt="check" style="width:100%; max-width: 30px; vertical-align: middle" width="30"></td>
+         <td align="left" class="BodyCopy" style="padding:5px 25px 15px 0; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" valign="middle">Stream to social</td>
+        </tr>
+       </tbody>
+      </table>
+                        <!-- End Column 1 -->  
+                        <!-- Column 2 -->    
+                        <table class="em_wrapper" align="right" border="0" cellpadding="0" cellspacing="0" style="" width="265">
+       <tbody>
+                                <tr>
+         <td align="left" class="BodyCopy" style="padding-bottom: 15px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; font-weight:400; color:#747487; letter-spacing: .01em" valign="top" width="30"><img src="http://click.zoom.us/l/84442/2020-10-16/bm3j5f/84442/1602887939omfO00AU/green_check_mark_72x72.png" alt="check" style="width:100%; max-width: 30px; vertical-align: middle" width="30"></td>
+         <td align="left" class="BodyCopy" style="padding:5px 25px 15px 0; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" valign="middle">Expanded user management &amp; admin controls</td>
+        </tr>
+                                <tr>
+         <td align="left" class="BodyCopy" style="padding-bottom: 15px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; font-weight:400; color:#747487; letter-spacing: .01em" valign="top"><img src="http://click.zoom.us/l/84442/2020-10-16/bm3j5f/84442/1602887939omfO00AU/green_check_mark_72x72.png" alt="check" style="width:100%; max-width: 30px; vertical-align: middle" width="30"></td>
+         <td align="left" class="BodyCopy" style="padding:5px 25px 15px 0; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" valign="middle">Usage reporting made easy</td>
+        </tr>
+                                <tr>
+         <td align="left" class="BodyCopy" style="padding-bottom: 15px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; font-weight:400; color:#747487; letter-spacing: .01em" valign="top"><img src="http://click.zoom.us/l/84442/2020-10-16/bm3j5f/84442/1602887939omfO00AU/green_check_mark_72x72.png" alt="check" style="width:100%; max-width: 30px; vertical-align: middle" width="30"></td>
+         <td align="left" class="BodyCopy" style="padding:5px 25px 15px 0; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" valign="middle">Access to game changing add-ons</td>
+        </tr>
+           <tr>
+         <td align="left" class="BodyCopy" style="padding-bottom: 15px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; font-weight:400; color:#747487; letter-spacing: .01em" valign="top"><img src="http://click.zoom.us/l/84442/2020-10-16/bm3j5f/84442/1602887939omfO00AU/green_check_mark_72x72.png" alt="check" style="width:100%; max-width: 30px; vertical-align: middle" width="30"></td>
+         <td align="left" class="BodyCopy" style="padding:5px 25px 15px 0; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#747487; letter-spacing: .01em;" valign="middle">Live transcription</td>
+        </tr>
+           
+       </tbody>
+      </table>
+                        <!-- End Column 2 -->
+                            
+                            
+      </td>
+     </tr>
+                    
+<!--END Checklist-->
+                    <tr>
+      <td align="center" bgcolor="#ffffff" class="mobile-padding" style="padding:0px 30px 80px 30px;" valign="top">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
+       <tbody>
+                    <!-- CTA -->
+                                <tr>
+                                    <td align="center" style="padding-bottom: 30px" valign="top">
+                                        <table bgcolor="#FF5F0F" style="border-radius:3px; border-spacing:0; margin:0 auto">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="mobile-cta" style="border: 0 solid #FF742E;  display: inline-block; padding: 20px 45px; text-align: center; font-family:'Lato', Helvetica, sans-serif; font-size:15px; line-height:24px; color:#FFFFFF; font-weight:900; text-decoration: none; text-transform: uppercase; letter-spacing: .2em">
+                                                        <a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f399f2c2a9c37cd02e48d4bde2cd1445fc20c3f3c9d0104d842be6e06031b2c2de62d61b45b0aa8ec4377426311d512b4c7733d43c701a1340" style="color:#FFFFFF; text-decoration: none" target="_blank">Switch to Pro</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End CTA -->
+                            </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--Disclaimer-->
+<tr>
+      <td class="mobile-padding" align="center" bgcolor="#eef6ff" style="padding:40px 30px 50px 30px;" valign="top">
+      <table width="100%">
+                            <tr>
+         <td align="left" colspan="1" style="padding: 0px 30px 40px 30px; font-family:'Lato', Helvetica, sans-serif; font-size:20px; line-height:24px; font-weight:700; color:#232333; text-align: center; text-transform: uppercase; letter-spacing:0.05em;" class="mobile-padding">Disclaimer</td>
+        </tr>
+                            </table> 
+                            <table width="100%">
+                                <tr>
+                                    
+<td align="left" colspan="2" valign="top" class="mobile-padding" style="padding: 0px 0px 0px 0px; font-family:'Lato', Helvetica, sans-serif; font-size:16px; line-height:24px; font-weight:600; color:#747487; letter-spacing: .01em;">This offer is only available to new customers purchasing a Pro Annual Plan Online. This offer is not available to customers with pre-existing discounts. Maximum of 9 Annual Licenses per Purchase. This coupon has no cash value and can only be used for up to 9 Pro Annual Licenses. Coupon must be redeemed by 12/31/22 at 11:59PM PT and will be effective for 1 annual billing cycle. This cannot be combined, exchanged, or used in conjunction with any other offer. Please note that Federal, State and Local governments are not eligible for this promotion. These fees are
+ exclusive of taxes.                            
+         </td>
+        </tr>
+                            </table>
+
+      </td>
+     </tr>
+                    
+<!--END Disclaimer--> 
+                    <!-- Gray Box -->
+     <tr>
+      <td align="center" bgcolor="#E4E4ED" valign="top">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
+       <tbody>
+        <tr>
+         <td align="center" style="padding:30px 15px;" valign="top">
+         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <td align="center" style="padding-bottom:15px;" valign="top">
+            <table align="center" border="0" cellpadding="0" cellspacing="0">
+             <tbody>
+              <tr>
+               <td align="center" valign="top" class=""><a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f3c24602b868cfceaa380e37546c1975a8ea2e541b291e1de64267ce67ace8564b0986981d264dc2b7aed0495ff158f374759fe2dd61f70169" style="text-decoration:none;" target="_blank"><img alt="Twitter" border="0" height="28" src="http://click.zoom.us/l/84442/2019-12-26/bfs1bv/84442/140021/Social_Twitter_2020.png" style="display:block; font-family:'Lato', Helvetica, sans-serif; font-size:9px; line-height:22px; color:#ffffff;" width="28"></a></td>
+               <td width="12" class="">&nbsp;</td>
+               <td align="center" valign="top" class=""><a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f37511dda93d2e5598f4d9ab7eb17bb4f79178d065e13ac6ef18b9f07b1ba97b5c3b654a1dc4634bb0f6053fbac37907b6e85c1396954382cf" style="text-decoration:none;" target="_blank"><img alt="LinkedIn" border="0" height="28" src="http://click.zoom.us/l/84442/2019-12-26/bfs1bs/84442/140023/Social_LinkedIn_2020.png" style="display:block; font-family:'Lato', Helvetica, sans-serif; font-size:9px; line-height:22px; color:#ffffff;" width="28"></a></td>
+               <td width="12" class="">&nbsp;</td>
+               <td align="center" valign="top" class=""><a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f343869286f3c2cacca3e1b25d369e667b905b151bcc4f247a4d873ba170cbe2a87cfe0bfce1fc1daefcc73bde20cd4a46a55af2228e4dae53" style="text-decoration:none;" target="_blank"><img alt="Blog" border="0" height="28" src="http://click.zoom.us/l/84442/2019-12-26/bfs1bx/84442/140025/Social_Blog_2020.png" style="display:block; font-family:'Lato', Helvetica, sans-serif; font-size:9px; line-height:22px; color:#ffffff;" width="28"></a></td>
+                  <td width="12" class="">&nbsp;</td>
+                                 <td align="center" valign="top" class=""><a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f3f99a66371cbd561c1da3965ff117a24cc18ce38a34f9e64d37cd3bb98e04be7dbd4faa97dc6dfb18d232403406676135677d71a1642fe3f5" style="text-decoration:none;" target="_blank"><img alt="Instagram" border="0" height="28" src="https://storage.pardot.com/84442/1617920186dPLmzrHo/Instagram.png" style="display:block; font-family:'Lato', Helvetica, sans-serif; font-size:9px; line-height:22px; color:#ffffff;" width="28"></a></td>
+
+              </tr>
+             </tbody>
+            </table>
+            </td>
+           </tr>
+           <tr>
+            <td align="center" class="em_grayfooter" style="font-family:'Lato', Helvetica, sans-serif; font-size:13px; line-height:22px; color:#828282;"><a href="tel:1-888-799-9666" style=" text-decoration: none; color: #828282;">+1.888.799.9666</a><br>
+            © 2022  Zoom - All Rights Reserved</td>
+           </tr>
+          </tbody>
+         </table>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <!--[if (gte mso 9)|(IE)]>         </td>       </tr>        </table>        <![endif]--></td>
+     </tr>
+     <!-- Footer -->
+     <tr>
+      <td align="center" bgcolor="#eeeeee" valign="top"><!--[if (gte mso 9)|(IE)]>        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">       <tr>         <td align="center" valign="top" width="600">        <![endif]-->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
+       <tbody>
+        <tr>
+         <td align="center" style="padding:30px 0 10px 0;" valign="top">
+         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <td align="center" class="em_grayfooter" style="font-family:'Lato', Helvetica, sans-serif; font-size:13px; line-height:20px; color:#969AA1;">Visit <a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f30c9eb597bd65c55f177dfd316e7a9c91f58f2ebb2605ca8d6ffa8e03222db588070e38275e94429519f62863b44999d9fc4154cbea09356e" style="color:#969AA1" target="_blank">zoom.us</a><br>
+             <a href="https://click.e.zoom.us/?qs=d85fa32efa1b17f37eecc70bbedc2d7685e39ee607d23245e6286ee361bb67b90008f8db5faf3368bc28e32817e80142decfde1bea5fe808f6ac7b8a3d60cf02" style="color:#969AA1; text-decoration: none;" target="_blank">Zoom Video Communications, Inc<br>55 Almaden Blvd #600 <br>San Jose, CA, 95113, US<br>
+            </a></td>
+           </tr>
+          </tbody>
+         </table>
+         </td>
+        </tr>
+        <tr>
+         <td align="center" style="padding:0 0 40px 0;" valign="top">
+         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <td align="center" class="em_grayfooter" style="font-family:'Lato', Helvetica, sans-serif; font-size:10px; line-height:15px; color:#969AA1;">You're receiving this email because you signed up for a Zoom account.<br>
+            If you wish to be removed from our email list, <a style="color:#969AA1; text-decoration: underline;" href="https://click.e.zoom.us/?qs=d85fa32efa1b17f31666543d9640da4881670f1ad56f4cac949d14dc95e9cabd3577fc76014fae30e46979c3484e51575ca73f4fd0c3984406e42014d318ec55" >unsubscribe</a>.</td>
+           </tr>
+          </tbody>
+         </table>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <!--[if (gte mso 9)|(IE)]>         </td>       </tr>        </table>        <![endif]--></td>
+     </tr>
+    </tbody>
+   </table>
+   <!--[if (gte mso 9)|(IE)]>               </td>             </tr>           </table>           <![endif]--></td>
+  </tr>
+ </tbody>
+</table>
+   <img src="https://click.e.zoom.us/open.aspx?ffcb10-ff3510747566-fe2f17747d65067b731670-fe33117171640475701574-ff9b1573-fe2517747d620d7c741d71-fef711757c6005&d=110013&bmt=0" width="1" height="1" alt=""> 
+</body>
+</html>

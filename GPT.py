@@ -1,7 +1,5 @@
 import os
 import pickle
-from random import *
-from bs4 import BeautifulSoup
 # Gmail API utils
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -18,15 +16,15 @@ from mimetypes import guess_type as guess_mime_type
 
 # Request all access (permission to read/send/receive emails, manage the inbox, and more)
 SCOPES = ['https://mail.google.com/']
-our_email = 'keyanhuang3@gmail.com'
+our_email = 'idatewang@gmail.com'
 
 
 def gmail_authenticate():
     creds = None
     # the file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first time
-    if os.path.exists("token.pickle"):
-        with open("token.pickle", "rb") as token:
+    if os.path.exists("../token.pickle"):
+        with open("../token.pickle", "rb") as token:
             creds = pickle.load(token)
     # if there are no (valid) credentials availablle, let the user log in.
     if not creds or not creds.valid:
@@ -36,7 +34,7 @@ def gmail_authenticate():
             flow = InstalledAppFlow.from_client_secrets_file('../cre.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # save the credentials for the next run
-        with open("token.pickle", "wb") as token:
+        with open("../token.pickle", "wb") as token:
             pickle.dump(creds, token)
     return build('gmail', 'v1', credentials=creds)
 
@@ -98,22 +96,22 @@ def parse_parts(service, parts, folder_name, message):
                 # if the email part is text plain
                 if data:
                     text = urlsafe_b64decode(data).decode()
-                    # print(text)
+                    print(text)
             elif mimeType == "text/html":
                 # if the email part is an HTML content
                 # save the HTML file and optionally open it in the browser
                 if not filename:
-                    filename = folder_name + str(randint(1, 100)) + str(randint(1, 100)) + ".html"
+                    filename = "index.html"
                 filepath = os.path.join(folder_name, filename)
-                # print("Saving HTML to", filepath)
+                print("Saving HTML to", filepath)
                 try:
                     with open(filepath, "wb") as f:
                         f.write(urlsafe_b64decode(data))
                 except TypeError:
                     continue
-            # else:
+            else:
                 # attachment other than a plain text or HTML
-                # print("Attachment\n")
+                print("Attachment\n")
                 # for part_header in part_headers:
                 #     part_header_name = part_header.get("name")
                 #     part_header_value = part_header.get("value")
@@ -148,7 +146,6 @@ def read_message(service, message):
     parts = payload.get("parts")
     folder_name = "email"
     has_subject = False
-    sender = ""
     if headers:
         # this section prints email basic info & creates a folder for the email
         for header in headers:
@@ -156,16 +153,17 @@ def read_message(service, message):
             value = header.get("value")
             if name.lower() == 'from':
                 # we print the From address
-                # print("From:", value)
-                sender = value
-            # if name.lower() == "to":
-            # we print the To address
-            # print("To:", value)
+                print("From:", value)
+            if name.lower() == "to":
+                # we print the To address
+                print("To:", value)
             if name.lower() == "subject":
                 # make our boolean True, the email has "subject"
                 has_subject = True
                 # make a directory with the name of the subject
                 folder_name = clean(value)
+                if folder_name == '':
+                    folder_name = "temp"
                 # we will also handle emails with the same subject name
                 folder_counter = 0
                 while os.path.isdir(folder_name):
@@ -177,31 +175,26 @@ def read_message(service, message):
                         folder_name = f"{folder_name[:-3]}_{folder_counter}"
                     else:
                         folder_name = f"{folder_name}_{folder_counter}"
-                # os.mkdir(folder_name)
-                # print("Subject:", value)
-            # if name.lower() == "date":
-            # we print the date when the message was sent
-            # print("Date:", value)
-    # if not has_subject:
-    # if the email does not have a subject, then make a folder with "email" name
-    # since folders are created based on subjects
-    # if not os.path.isdir(folder_name):
-    # os.mkdir(folder_name)
-    folder_name = "/Users/idatewang/Documents/Personal/Projects/mail_unsubscriber/htmls/"
+                os.mkdir(folder_name)
+                print("Subject:", value)
+            if name.lower() == "date":
+                # we print the date when the message was sent
+                print("Date:", value)
+    if not has_subject:
+        # if the email does not have a subject, then make a folder with "email" name
+        # since folders are created based on subjects
+        if not os.path.isdir(folder_name):
+            os.mkdir(folder_name)
     parse_parts(service, parts, folder_name, message)
-    # print("=" * 50)
+    print("=" * 50)
 
 
-def main():
-    # get emails that match the query you specify
-    results = search_messages(service, "unsubscribe")
-    print(f"Found {len(results)} results.")
-    # for each email matched, read it (output plain/text to console & save HTML and attachments)
-    for msg in results:
-        read_message(service, msg)
+# get emails that match the query you specify
+results = search_messages(service, "unsubscribe")
+print(f"Found {len(results)} results.")
+# for each email matched, read it (output plain/text to console & save HTML and attachments)
+for msg in results:
+    read_message(service, msg)
 
-    # get html
-    # run this to grab link:
-
-
-main()
+# get html
+# run this to grab link:

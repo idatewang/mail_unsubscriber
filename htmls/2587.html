@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- modified from https://github.com/TedGoas/Cerberus/blob/94a5d0056791e06d29775c051df089f943beb211/cerberus-fluid.html -->
+    <!-- this layout is used in SendGrid's template system, and saved here in version control for reference -->
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <!-- <title>Splitwise</title> --> <!-- The title tag shows in email notifications, like Android 4.4, but I can't
+                                             immediately get it working with SendGrid. -Ryan -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+        <link href='https://fonts.googleapis.com/css?family=Arial:400,700' rel='stylesheet' type='text/css'>
+        <style>
+            * {
+                font-family: Arial, sans-serif !important;
+            }
+        </style>
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+      <!-- CSS Reset -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What is does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        .mobile-link--footer a,
+        a[x-apple-data-detectors] {
+            color:inherit !important;
+            text-decoration: underline !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+    </style>
+
+    <!-- Progressive Enhancements -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #e23a00 !important;
+            border-color: #e23a00 !important;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .desktop-only {
+                display: none !important;
+            }
+            .mobile-only {
+                display: block !important;
+            }
+        }
+    </style>
+
+</head>
+<body width="100%" bgcolor="#ffffff" style="margin: 0; mso-line-height-rule: exactly; background-color: #ffffff;">
+    <center style="width: 100%;">
+
+        <!-- Email Header : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#EBEEF3" style="background-color: #EBEEF3;">
+            <tr>
+                <td style="padding: 20px 0; text-align: center">
+                    <img src="https://dx0qysuen8cbs.cloudfront.net/assets/email/templates/2019_modern/header_logo_horizontal@2x.png" width="111" height="38" alt="Splitwise" border="0" style="height: auto; background: #EBEEF3; font-family: sans-serif; font-size: 15px;line-height: 20px; color: #555555">
+                </td>
+            </tr>
+        </table>
+        <!-- Email Header : END -->
+
+        <!-- Email Body : BEGIN -->
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#EBEEF3" style="background: url('https://dx0qysuen8cbs.cloudfront.net/assets/email/templates/2021/bg_gradient.png') #ffffff; background-repeat: repeat-x; background-position:top;">
+
+            <!-- 1 Column Text + Button : BEGIN -->
+            <tr>
+                <td style="padding: 0 16px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="max-width: 568px; margin: auto">
+                        <tr>
+                            <td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                
+
+<div style="padding: 0 16px; text-align: center; margin-bottom: 24px;">
+  <div style="font-size: 12px; font-weight: 700; line-height: 16px;">
+    Introducing
+  </div>
+  <img alt="Splitwise Pay" src="https://assets.splitwise.com/assets/images/email/templates/2021/splitwise_pay_logo.png" height="52">
+  <div style="line-height: 24px; font-size: 16px; margin-top: 24px;">
+    You can now send and receive bank payments directly within Splitwise. It's easy, convenient, and best of all, free!<sup style="position: relative; font-size: 50%; line-height: 0;">1</sup>
+  </div>
+</div>
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+  <tr>
+    <td>
+      <div style="text-align: center; color: #373B3F; background: #ffffff; border-radius: 8px; padding: 16px;">
+        <div style="font-size: 16px; line-height: 24px;">
+          Your friend <strong>Splitwise</strong> has granted you ✨early access✨
+        </div>
+
+        <div style="margin-top: 24px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+  <tr>
+    <td style="border-radius: 3px; background: #18A582; text-align: center;" class="button-td">
+      <a clicktracking=off href="https://www.splitwise.com/applinks/splitwise_p2p?sync=blocking&tr=T3KNaP4SoW7" style="background: #18A582; border: 16px solid #18A582; border-right: 24px solid #18A582; border-left: 24px solid #18A582; font-family: sans-serif; font-size: 18px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="">
+        <span style="color:#ffffff;" class="button-link">Get started now</span>
+      </a>
+    </td>
+  </tr>
+</table>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+          <img src="https://assets.splitwise.com/assets/images/email/templates/2021/bank_green.png" width="53">
+        </div>
+
+        <div style="line-height: 24px; font-size: 16px; padding: 0 82px; margin-top: 16px;">
+          Send and receive money, using your existing bank account.
+        </div>
+
+        <div style="margin-top: 24px;">
+          <img src="https://assets.splitwise.com/assets/images/email/templates/2021/lock.png" width="45">
+        </div>
+
+        <div style="line-height: 24px; font-size: 16px; padding: 0 82px; margin-top: 16px;">
+          Your payments are private and secure.
+        </div>
+
+        <div style="margin-top: 24px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+  <tr>
+    <td style="border-radius: 3px; background: #18A582; text-align: center;" class="button-td">
+      <a clicktracking=off href="https://www.splitwise.com/applinks/splitwise_p2p?sync=blocking&tr=T3KNaP4SoW7" style="background: #18A582; border: 16px solid #18A582; border-right: 24px solid #18A582; border-left: 24px solid #18A582; font-family: sans-serif; font-size: 18px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="">
+        <span style="color:#ffffff;" class="button-link">Get started now</span>
+      </a>
+    </td>
+  </tr>
+</table>
+
+        </div>
+
+        <div style="line-height: 24px; font-size: 16px; margin-top: 40px;">
+            <div style="font-size: 16px; line-height: 20px; padding: 0 16px;">
+  Need some help? Reply to this email or email <a style="color: #1D856C;" href="mailto:payments.help@splitwise.com">payments.help@splitwise.com</a>.
+</div>
+
+        </div>
+
+        <div style="margin-top: 16px; font-size: 12px; line-height:18px; color: #6D767E;">
+  1. Splitwise Pay charges no fees for standard electronic funds transfers. A US checking account is required for bank transfers, and transactions generally do not incur transaction fees. Check with your financial institution.
+</div>
+
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- 1 Column Text + Button : END -->
+
+        </table>
+        <!-- Table to maintain visual gutter : END -->
+        <!-- Email Body : END -->
+
+        <!-- Email Footer : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#ffffff">
+            <tr>
+                <td style="padding: 30px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;">
+                    Splitwise, Inc.<br><span class="mobile-link--footer">150 Union St, Suite 606</span><br><span class="mobile-link--footer">Providence, RI 02903 USA</span>
+                    <br><br>
+                    <a href="https://emails.splitwise.com/asm/unsubscribe/global/?user_id=256585&amp;data=UwGCd0G0MMQoN_3cI4wVpRJeivl45HsVV1LGNI7aDJRoMDAwdTAwMIjb1dLJJyEMr7AmjBKvEmvS8_x-70IRXaxCNxReJG9nW-p1EYNdp5oqGSr8mQ-8fKtOYq8OtvEYeFUhvixzpCZu7fwXTfuduohqGYmr6UhJvfLDrZ4EOpCdwi39WH6ytPy_ai7O1YO06kUqdapUCVVTWy9z_RJQ39RjxRzHLOLHPpVNSwSdZK8lcY3Ugl49roGpvP8brk27slySXVfg9NLHmEyYcfgkMoyvw3E339rp0eBTFx9wiX4MgXdDUodyOZK_aTTyCZ7VMjwzaL2HLXigaRvqGOT1aFAk2O830abtvXAxYMg3ndpcezshBjKOKfvqegBbiYX6EqROQLhcPcCwoCZFfgLo8IQHpArwJZOdeABn-Pd8HGyrrAYupFnHChMkZzuk1LEIOkVhQ5HW4AduNEZdlVOsbFTpBnEe8rn9OxQ34n-GCKupAsPkfFYs0g==" style="color:#888888; text-decoration:underline;">unsubscribe</a>
+                </td>
+            </tr>
+        </table>
+        <!-- Email Footer : END -->
+    </center>
+<img src="https://emails.splitwise.com/wf/open?upn=GFd3-2BZ-2BwdFKn-2FmmJ2KvfVvpVNTBXCVkTQvfDE9kJ8ULQTqpzfLEivfxvxPpwEhdbX1RSqt2X5hzd9fIq-2F4Lsy-2BRLOfn-2Bef3nSmc7Xl99vHlmFk5wscmBrDGwPmc820vR7fdL4DYb8fu-2BHL-2BaFmmytMOEb9w10U-2Ba5lM0cf14iD5myMPe6ui7g2gZqVxCJ7T-2BotrxMT30aYSLewUYX1nx1AZp9XnOk22OTDDRzNG4gz0SG-2B-2FOiCu0MoWTmZBYNL2b8l7wLo3-2FRAby9mHn-2BcrnC1W8CAMP2olXOIgx85-2Fwry-2FD7VchpC7RPoX4vSjd008fTzYX-2Faf5yEMWoDHnW8WYiw-3D-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>
+  

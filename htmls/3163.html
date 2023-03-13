@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- modified from https://github.com/TedGoas/Cerberus/blob/94a5d0056791e06d29775c051df089f943beb211/cerberus-fluid.html -->
+    <!-- this layout is used in SendGrid's template system, and saved here in version control for reference -->
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <!-- <title>Splitwise</title> --> <!-- The title tag shows in email notifications, like Android 4.4, but I can't
+                                             immediately get it working with SendGrid. -Ryan -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <style>
+            * {
+                font-family: Lato, sans-serif !important;
+            }
+        </style>
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+    
+      <!-- CSS Reset -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+        
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        /* What is does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+        
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+                
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto; 
+        }
+        
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+        
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        .mobile-link--footer a,
+        a[x-apple-data-detectors] {
+            color:inherit !important;
+            text-decoration: underline !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+      
+    </style>
+    
+    <!-- Progressive Enhancements -->
+    <style>
+        
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #e23a00 !important;
+            border-color: #e23a00 !important;
+        }
+        
+        .mobile-only {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .desktop-only {
+                display: none !important;
+            }
+            .mobile-only {
+                display: block !important;
+            }
+        }
+    </style>
+
+</head>
+<body width="100%" bgcolor="#eeeeee" style="margin: 0; mso-line-height-rule: exactly;">
+    <center style="width: 100%; background: #eeeeee;">
+        <!--    
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+        <div style="max-width: 600px; margin: auto;">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Header : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+                <tr>
+                    <td style="padding: 20px 0; text-align: center">
+                        <img src="https://dx0qysuen8cbs.cloudfront.net/assets/email/templates/2019_modern/header_logo_horizontal@2x.png" width="111" height="38" alt="Splitwise" border="0" style="height: auto; background: #eeeeee; font-family: sans-serif; font-size: 15px;line-height: 20px; color: #555555">
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Header : END -->
+            
+            <!-- Email Body : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 30px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+
+                                    
+
+
+<h2 style="text-align: center;
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;">
+  New sign-in to your Splitwise account
+</h2>
+<h3 style="text-align: center;
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;">
+  <a style="color: #000; text-decoration: none">
+    idatewang@gmail.com
+  </a>
+</h3>
+<hr style="border: 0; height: 1px; background: #ccc; margin: 10px 0">
+
+There was a new login to your Splitwise account from the following device: <strong>iPhone (Safari)</strong>. We're sending this note to confirm that it was you.<br><br>If you recently logged into your Splitwise account, you can safely ignore this email.
+<br>
+<br>
+  If you don't recognize this login, please <a href="https://emails.splitwise.com/ls/click?upn=Q0VOMzaXxjJtwt0qTuNrrDpoPL8Q50aMecLQskTq49e5TdVr0b-2B-2Bdd2GtqtWU8a4xP1e_2aWXzv-2FIElfO4KxC7iXx3RDmmOxP7VXk7Nc81ev2-2FPl6nDMUWRWfKtxAKV9DpJqXUyBKNxce1k0x3JsKlXCW6Xf-2B732f7BiabMBS6kdi-2F21NROS4hPm2gJqQFnfMOX-2BvI-2F-2BqeTS0YhdaD9fDh3Q2i7xSeh7On5VHq8eJkV9Zci779l0eke-2F9nnJqHfC8JpN2clNgvQ43wfYYwBkN0BcoV-2F-2B-2BXqjOwAQlUvF9xPTRcflCkL2tVZgrKEtwhGUpds6eo1B2-2BzedEHw-2FOYAjwfAq3ue9ZoIqYC9YCu03zYeCjbFG8nu4H-2F89QD7cxmu5usFV">review your account activity</a>.
+
+
+
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text + Button : END -->
+
+            </table>
+            <!-- Email Body : END -->
+          
+            <!-- Email Footer : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+                <tr>
+                    <td style="padding: 30px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;">
+                        Splitwise, Inc.<br><span class="mobile-link--footer">150 Union St, Suite 606</span><br><span class="mobile-link--footer">Providence, RI 02903 USA</span>
+                        <br><br>
+                        <a href="https://emails.splitwise.com/asm/unsubscribe/global/?user_id=256585&amp;data=QoM_HpTfl4aCmbujf3Zp8Y7cIiWHUI5UJOFiTFIfWv9oMDAwdTAwMMeFIfL0fh6PeMZpjlwsEVFb-mtzzQDkeBIf5yqi9u4_8SBuIpJk3TfYsuznPdWm0-Vril-X15KYZt1cuDnK0yXfGyv2dSlTJ0cs3HAsOPnoqK0vMsDHK9t-HXd3o-gEcM3a9SMbsG-blXHSKeSnnq4MKD1yUJLLiV6_1MAmiwJ3CzV2IFUGPUclKAfCUN-xcDgWSNcN7Tllv91eZ4sEQ1hCSNhrBCFt3vOSxUzPbC2eiPsMK3CKBMIG0VDGjutamImnuGs72qE4F49WCLR-oHUJeLbmjo8BMWtGPRzvO0Ki_inOMiEJahsOB7fwfCXc1Yyb-lQcIx5IlTR2pFvBC9jS7epHjs9OqIiCd_F8gupD_UaXgMRIQIrX6ncU8pi5YcP6tr3ozLCTN_BXdqm1j_-Ns0gVkueVN5drREQDUR76" style="color:#888888; text-decoration:underline;">unsubscribe</a>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </center>
+<img src="https://emails.splitwise.com/wf/open?upn=GFd3-2BZ-2BwdFKn-2FmmJ2KvfVvpVNTBXCVkTQvfDE9kJ8ULQTqpzfLEivfxvxPpwEhdb7K-2BDKwTI3ACS7N5UsLortlZwMOTKUthJ95RZosxpsmPpfONccyucEDCFEZ3NpUfi6iR4BR91ohyVnw-2BH2S0utziiBdq3b2DSy-2FV48VyIFcUEpBagm6AbFGz6eeo7XA-2FDRKzqIRjvAkrPWWepYtfckOHN3xURgU3yt-2F5lZSyHjxGnNHesLQcazOGviJc7ryh8EAD-2Bf87uBxYdjST9l9Aescxh9M9tC51AJHg423254G6uuxELps6xCE49Ld6Gs9QVsqVU45atxLuuKP1Fqb5FUA-3D-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>

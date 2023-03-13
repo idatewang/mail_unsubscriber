@@ -1,0 +1,344 @@
+<!--item discussions are nested under items themselves--><!--item discussions are nested under items themselves--><!--Grammatically formats an array of partners into a nice looking string.--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><style type="text/css">/* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+/* Force Hotmail to display emails at full width */
+.ReadMsgBody{width:100%;}
+.ExternalClass{width:100%;}
+/* Prevent Yahoo! from styling links */
+.yshortcuts, a .yshortcuts, a .yshortcuts:hover, a .yshortcuts:active, a .yshortcuts:focus{
+    background-color:transparent !important;
+    border:none !important;
+    color:inherit !important;
+}
+/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+body{
+    margin:0;
+    padding:0;
+}
+img{
+    border:0;
+    height:auto;
+    line-height:100%;
+    outline:none;
+    text-decoration:none;
+}
+table, td{
+    border-collapse:collapse !important;
+    mso-table-lspace:0pt;
+    mso-table-rspace:0pt;
+}
+#bodyTable, #bodyCell{
+    height:100% !important;
+    margin:0;
+    padding:0;
+    width:100% !important;
+}
+#bodyCell{padding:20px;}
+#templateContainer{width:600px;}
+/* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
+/* ========== Page Styles ========== */
+body, #bodyTable{background-color:#ffffff;}
+#bodyCell{border-top:0;}
+#templateContainer{border:0px solid #FFFFFF;}
+h1{
+    color:#232327 !important;
+    display:block;
+    font-family:Helvetica;
+    font-size:30px;
+    font-style:normal;
+    font-weight:bold;
+    line-height:100%;
+    letter-spacing:normal;
+    margin-top:0;
+    margin-right:0;
+    margin-bottom:10px;
+    margin-left:0;
+    text-align:left;
+}
+h2{
+    color:#232327!important;
+    display:block;
+    font-family:Helvetica;
+    font-size:28px;
+    font-style:normal;
+    font-weight:bold;
+    line-height:100%;
+    letter-spacing:normal;
+    margin-top:0;
+    margin-right:0;
+    margin-bottom:10px;
+    margin-left:0;
+    text-align:left;
+}
+h3{
+    color:#232327!important;
+    display:block;
+    font-family:Helvetica;
+    font-size:18px;
+    font-style:normal;
+    font-weight:bold;
+    line-height:100%;
+    letter-spacing:normal;
+    margin-top:0;
+    margin-right:0;
+    margin-bottom:10px;
+    margin-left:0;
+    text-align:right;
+}
+h4{
+    color:#232327 !important;
+    display:block;
+    font-family:Helvetica;
+    font-size:16px;
+    font-style:normal;
+    font-weight:bold;
+    line-height:100%;
+    letter-spacing:normal;
+    margin-top:0;
+    margin-right:0;
+    margin-bottom:10px;
+    margin-left:0;
+    text-align:left;
+}
+
+/* ========== Styles for ordered/unordered lists ========== */
+/* copied from web, see https://github.com/webedx-spark/web/blob/9cb921bcc7d4b07270b583d21b3b583da0439eb5/static/bundles/phoenix/template/styl/cml.styl#L84 */
+ul {
+    list-style-type: disc;
+}
+ul ul, ul > li[aria-level="2"] {
+    list-style-type: circle !important;
+}
+ul ul ul, ul > li[aria-level="3"] {
+    list-style-type: square !important;
+}
+ul ul ul ul, ul > li[aria-level="4"] {
+    list-style-type: disc !important;
+}
+ul ul ul ul ul, ul > li[aria-level="5"] {
+    list-style-type: circle !important;
+}
+ol ol, ol > li[aria-level="2"] {
+    list-style-type: lower-alpha !important;
+}
+ol ol ol, ol > li[aria-level="3"] {
+    list-style-type: lower-roman !important;
+}
+ol ol ol ol, ol > li[aria-level="4"] {
+    list-style-type: decimal !important;
+}
+ol ol ol ol ol, ol > li[aria-level="5"] {
+    list-style-type: lower-alpha !important;
+}
+
+ol li[aria-posinset]::marker {
+    content: attr(aria-posinset) ". ";
+}
+
+ul > li[aria-level="2"] {
+    margin-left: 32px !important;
+}
+ul > li[aria-level="3"] {
+    margin-left: 64px !important;
+}
+ul > li[aria-level="4"] {
+    margin-left: 96px !important;
+}
+ul > li[aria-level="5"] {
+    margin-left: 128px !important;
+}
+
+ol > li[aria-level="2"] {
+    margin-left: 32px !important;
+}
+ol > li[aria-level="3"] {
+    margin-left: 64px !important;
+}
+ol > li[aria-level="4"] {
+    margin-left: 96px !important;
+}
+ol > li[aria-level="5"] {
+    margin-left: 128px !important;
+}
+
+/* ========== Header Styles ========== */
+#templatePreheader{
+    background-color:#FFFFFF;
+    border-bottom:0;
+}
+.preheaderContent{
+    color:#808080;
+    font-family:Helvetica;
+    font-size:16px;
+    line-height:125%;
+    text-align:left;
+}
+.preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */{
+    color:#606060;
+    font-weight:normal;
+    text-decoration:underline;
+}
+#templateHeader{
+    background-color:#F4F4F4;
+    border-top:5px solid #FFFFFF;
+    border-bottom:5px solid #FFFFFF;
+}
+.headerContent{
+    color:#505050;
+    font-family:Helvetica;
+    font-size:20px;
+    font-weight:bold;
+    line-height:100%;
+    padding-top:0;
+    padding-right:0;
+    padding-bottom:0;
+    padding-left:0;
+    text-align:left;
+    vertical-align:middle;
+}
+.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{
+    color:#0367b0;
+    font-weight:normal;
+    text-decoration:underline;
+}
+#headerImage{
+    height:auto;
+    max-width:600px;
+}
+/* ========== Body Styles ========== */
+#templateBody{
+    background-color:#232327;
+    border-top:0;
+    border-bottom:0;
+}
+#bodyContentBlock{
+    background-color:#FFFFFF;
+}
+.bodyContent{
+    color:#505050;
+    font-family:Helvetica;
+    font-size:16px;
+    line-height:150%;
+    padding-top:15px;
+    padding-right:0;
+    padding-bottom:15px;
+    padding-left:0;
+    text-align:left;
+}
+.bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */{
+    color:#0367b0;
+    font-weight:normal;
+    text-decoration:underline;
+}
+.bodyContent img{
+    display:inline;
+    height:auto;
+    /*max-width:560px;*/
+}
+/* ========== Footer Styles ========== */
+#templateFooter{
+    background-color:#ffffff;
+    border-top:0;
+}
+.footerContent{
+    color:#808080;
+    font-family:Helvetica;
+    font-size:13px;
+    line-height:150%;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    padding-right:20px;
+    text-align:center;
+}
+.footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */{
+    color:#606060;
+    font-weight:normal;
+    text-decoration:underline;
+}
+.button {
+    text-align: center;
+    font-size: 16px;
+}
+/* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
+@media only screen and (max-width: 641px){
+    #templateContainer{width:auto !important;}
+}
+@media only screen and (max-width: 480px){
+    /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+    body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+    body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+    /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
+    td[id="bodyCell"]{padding:10px !important;}
+    /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
+    /* ======== Page Styles ======== */
+    table[id="templateContainer"]{
+      max-width:600px !important;
+      width:100% !important;
+    }
+    h1{
+      font-size:24px !important;
+      line-height:100% !important;
+    }
+    h2{
+      font-size:20px !important;
+      line-height:100% !important;
+    }
+    h3{
+      font-size:18px !important;
+      line-height:100% !important;
+    }
+    h4{
+      font-size:16px !important;
+      line-height:100% !important;
+    }
+    /* ======== Header Styles ======== */
+    table[id="templatePreheader"]{display:none !important;} /* Hide the template preheader to save space */
+    td[class="preheaderContent"] {
+      font-size: 16px;
+    }
+    img[id="headerImage"]{
+      height:auto !important;
+      max-width:600px !important;
+      width:100% !important;
+    }
+    td[class="headerContent"]{
+      font-size:20px !important;
+      line-height:125% !important;
+    }
+    /* ======== Body Styles ======== */
+    td[class="bodyContent"]{
+      font-size:18px !important;
+      line-height:125% !important;
+    }
+    /* ======== Footer Styles ======== */
+    td[class="footerContent"]{
+      font-size:14px !important;
+      line-height:115% !important;
+    }
+}
+</style></head><body marginwidth="0" offset="0" leftmargin="0" topmargin="0" marginheight="0">
+<div style="color:transparent;visibility:hidden;opacity:0;font-size:0px;border:0;max-height:1px;width:1px;margin:0px;padding:0px;border-width:0px!important;display:none!important;line-height:0px!important;"><img border="0" width="1" height="1" src="http://click.mail.coursera.org/q/ICcqvahi-j4Cuw_jLlQYaw~~/AAAAAQA~/RgRlKVslPVcIY291cnNlcmFCCmNFJdZGY8LCcz1SE0lkYXRlV2FuZ0BnbWFpbC5jb21YBAAAAAA~" alt=""/></div>
+<center><table id="bodyTable" border="0" cellpadding="0" cellspacing="0" width="100%" align="center" height="100%"><tr><td id="bodyCell" valign="top" align="center"><table id="templateContainer" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; border: 0; background-color: #f6f6f6;"><tr><td valign="top" align="center"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F6F6F6;"><tr><td class="preheaderContent" valign="top" style="padding: 0 0 15px 0"></td></tr></table></td></tr><tr><td valign="top" align="center"><table id="templateBody" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F6F6F6;"><tr><td valign="top" align="center"><table id="bodyContentBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F6F6F6;"><tr><td class="bodyContent" valign="top" style="color:#505050; font-size: 16px; line-height: 150%;padding: 20px 18px 32px"><table style="width: 100%;background-color:#ffffff; font-family: 'Arial'; word-wrap:break-word;" align="left"><tr><td id="CMLContent" style="padding: 28px 38px 0px; word-wrap:break-word;"><div>
+ <p style="margin-bottom:14px;min-height:20px;">​Hello Idate Wang,</p>
+ <p style="margin-bottom:14px;min-height:20px;">Let's get to know the revolution that began in Business Process Automation. On October 28, we'll be hosting a webinar introducing you to robotic process automation (RPA), and we'd love for you to join us.</p>
+ <p style="margin-bottom:14px;min-height:20px;"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5sZWFybnF1ZXN0LmNvbS93ZWJpbmFyLXNjaGVkdWxlLXVwY29taW5nLmFzcHg_YXV0b3JlZ2lzdGVyPTEwMTczNDEmdXRtX3NvdXJjZT1jb3Vyc2VyYSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1VaVBhdGgiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjEwNTMyNjM3LCJ1c2VyRW1haWwiOiJJZGF0ZVdhbmdAZ21haWwuY29tIiwibm90aWZpY2F0aW9uVHlwZSI6Im9wZW5jb3Vyc2UuYW5ub3VuY2VtZW50cyIsImNhbXBhaWduSWQiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuM3dERThTWi1UWk9sTXl4TXZmQ281ZyIsImNhbXBhaWduR3JvdXAiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuYW5ub3VuY2VtZW50cyIsImxpbmtzIjpbXX19LCJ1c2VySWQiOjEwNTMyNjM3fQ.TKGqH7-l_5de7g0jDd7ZjjDlDNXXCOjweHHB1KGWAUk" title="Register"><strong>A Beginners Guide to Robotic Process Automation (RPA) from UiPath</strong></a></p>
+ <p style="margin-bottom:14px;min-height:20px;"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5sZWFybnF1ZXN0LmNvbS93ZWJpbmFyLXNjaGVkdWxlLXVwY29taW5nLmFzcHg_YXV0b3JlZ2lzdGVyPTEwMTczNDEmdXRtX3NvdXJjZT1jb3Vyc2VyYSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1VaVBhdGgiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjEwNTMyNjM3LCJ1c2VyRW1haWwiOiJJZGF0ZVdhbmdAZ21haWwuY29tIiwibm90aWZpY2F0aW9uVHlwZSI6Im9wZW5jb3Vyc2UuYW5ub3VuY2VtZW50cyIsImNhbXBhaWduSWQiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuM3dERThTWi1UWk9sTXl4TXZmQ281ZyIsImNhbXBhaWduR3JvdXAiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuYW5ub3VuY2VtZW50cyIsImxpbmtzIjpbXX19LCJ1c2VySWQiOjEwNTMyNjM3fQ.TKGqH7-l_5de7g0jDd7ZjjDlDNXXCOjweHHB1KGWAUk" title="Register">October 28, 2022 / 4:00 pm - 5:00 pm US Eastern</a></p>
+ <p style="margin-bottom:14px;min-height:20px;"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5sZWFybnF1ZXN0LmNvbS93ZWJpbmFyLXNjaGVkdWxlLXVwY29taW5nLmFzcHg_YXV0b3JlZ2lzdGVyPTEwMTczNDEmdXRtX3NvdXJjZT1jb3Vyc2VyYSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1VaVBhdGgiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjEwNTMyNjM3LCJ1c2VyRW1haWwiOiJJZGF0ZVdhbmdAZ21haWwuY29tIiwibm90aWZpY2F0aW9uVHlwZSI6Im9wZW5jb3Vyc2UuYW5ub3VuY2VtZW50cyIsImNhbXBhaWduSWQiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuM3dERThTWi1UWk9sTXl4TXZmQ281ZyIsImNhbXBhaWduR3JvdXAiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuYW5ub3VuY2VtZW50cyIsImxpbmtzIjpbXX19LCJ1c2VySWQiOjEwNTMyNjM3fQ.TKGqH7-l_5de7g0jDd7ZjjDlDNXXCOjweHHB1KGWAUk" title="Register"><strong>Save your seat</strong></a></p>
+ <p style="margin-bottom:14px;min-height:20px;"></p>
+ <p style="margin-bottom:14px;min-height:20px;"><strong>What exactly is RPA?</strong></p>
+ <p style="margin-bottom:14px;min-height:20px;">Robotic process automation (RPA) software allows for the automation of routine computer tasks through a set of predefined rules.&nbsp;</p>
+ <p style="margin-bottom:14px;min-height:20px;"><strong>Where are the advantages?</strong></p>
+ <p style="margin-bottom:14px;min-height:20px;">Automating routine tasks with robots saves time and effort, increasing business productivity, adaptability, and responsiveness. The elimination of everyday tasks boosts employee happiness, engagement, and output.</p>
+ <p style="margin-bottom:14px;min-height:20px;"><strong>What makes RPA so revolutionary?</strong></p>
+ <p style="margin-bottom:14px;min-height:20px;">Software robots replace humans in repetitive or low-value tasks, such as accessing and navigating different systems and applications, reorganizing files and folders, extracting, copying, and pasting data, completing and submitting forms, and generating reports. Cognitive tasks, such as text interpretation, chat and conversation participation, understanding of unstructured data, and the application of sophisticated machine learning models to the making of complex decisions, are now within the capabilities of the most advanced robots.&nbsp;</p>
+ <p style="margin-bottom:14px;min-height:20px;"><strong>Typical Salary Predictions</strong></p>
+ <p style="margin-bottom:14px;min-height:20px;">According to Glassdoor, the typical annual salary of an RPA developer in the United States is $101,307, comprised of a base salary of $81,706 and bonus payments totaling $19,601. The typical salary range for this type of work is $74,000 to $155,000. Wages can start at $60,000 and go as high as $264,000.</p>
+ <p style="margin-bottom:14px;min-height:20px;"></p>
+ <p style="margin-bottom:14px;min-height:20px;"><strong>Join us for our webinar to learn more about RPA, its concept, and the features offered by UiPath, the market leader in RPA software.</strong></p>
+ <p style="margin-bottom:14px;min-height:20px;"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5sZWFybnF1ZXN0LmNvbS93ZWJpbmFyLXNjaGVkdWxlLXVwY29taW5nLmFzcHg_YXV0b3JlZ2lzdGVyPTEwMTczNDEmdXRtX3NvdXJjZT1jb3Vyc2VyYSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1VaVBhdGgiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjEwNTMyNjM3LCJ1c2VyRW1haWwiOiJJZGF0ZVdhbmdAZ21haWwuY29tIiwibm90aWZpY2F0aW9uVHlwZSI6Im9wZW5jb3Vyc2UuYW5ub3VuY2VtZW50cyIsImNhbXBhaWduSWQiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuM3dERThTWi1UWk9sTXl4TXZmQ281ZyIsImNhbXBhaWduR3JvdXAiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuYW5ub3VuY2VtZW50cyIsImxpbmtzIjpbXX19LCJ1c2VySWQiOjEwNTMyNjM3fQ.TKGqH7-l_5de7g0jDd7ZjjDlDNXXCOjweHHB1KGWAUk" title="Register"><strong>Register now</strong></a></p>
+ <p style="margin-bottom:14px;min-height:20px;"></p>
+ <p style="margin-bottom:14px;min-height:20px;">W​e appreciate it!</p>
+ <p style="margin-bottom:14px;min-height:20px;"><em>The LearnQuest Team</em></p>
+</div></td></tr><tr><td style="padding: 0px 38px 28px"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvbGVhcm4vbmV1cmFsLW5ldHdvcmtzLXJhbmRvbS1mb3Jlc3RzL2hvbWUvd2VsY29tZT91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9b3RoZXImdXRtX2NhbXBhaWduPW9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy5hbm5vdW5jZW1lbnRzfm9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy4zd0RFOFNaLVRaT2xNeXhNdmZDbzVnIiwidHJhY2tpbmciOnsidXNlcklkIjoxMDUzMjYzNywidXNlckVtYWlsIjoiSWRhdGVXYW5nQGdtYWlsLmNvbSIsIm5vdGlmaWNhdGlvblR5cGUiOiJvcGVuY291cnNlLmFubm91bmNlbWVudHMiLCJjYW1wYWlnbklkIjoib3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LjN3REU4U1otVFpPbE15eE12ZkNvNWciLCJjYW1wYWlnbkdyb3VwIjoib3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LmFubm91bmNlbWVudHMiLCJsaW5rcyI6W119fSwidXNlcklkIjoxMDUzMjYzN30.rtFW8NdO3dL1QlQUw8RSV0f4ldEgwxI4WVcDZveXUzw" style="text-decoration: none;vertical-align:top;"><span style="font-size: 14px; padding: 16px 35px; font-weight: bold; background-color: #0056D2; line-height: 22px; display: inline-block; color: white; border-radius: 4px; text-align: center;margin-top:10px;">Go to course</span></a></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td valign="top" align="center"><table id="templateFooter" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F6F6F6;font-family: 'Arial';"><tr><td class="footerContent" valign="top" style="padding-top:20px; padding-right:0; padding-bottom:20px; padding-left:0; text-align:center;"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmc_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPW90aGVyJnV0bV9jYW1wYWlnbj1vcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuYW5ub3VuY2VtZW50c35vcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuM3dERThTWi1UWk9sTXl4TXZmQ281ZyIsInRyYWNraW5nIjp7InVzZXJJZCI6MTA1MzI2MzcsInVzZXJFbWFpbCI6IklkYXRlV2FuZ0BnbWFpbC5jb20iLCJub3RpZmljYXRpb25UeXBlIjoib3BlbmNvdXJzZS5hbm5vdW5jZW1lbnRzIiwiY2FtcGFpZ25JZCI6Im9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy4zd0RFOFNaLVRaT2xNeXhNdmZDbzVnIiwiY2FtcGFpZ25Hcm91cCI6Im9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy5hbm5vdW5jZW1lbnRzIiwibGlua3MiOltdfX0sInVzZXJJZCI6MTA1MzI2Mzd9.JK8xUFSaNMdV6V141nysYjZjAejwZvhvWOaT47WbcGI" ><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.amazonaws.com/mailspin/prod/11_03_2020_19_18_29_coursera-wordmark-black.png?w=260&amp;fit=scale" width="130" alt=" Coursera " style="width: 130px; height: auto; " align="bottom" class="coursera-logo-black-image" height="auto"/></a></td></tr><tr><td valign="top" style="background-color: #F6F6F6; border: 1px solid #F2F2F2;"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="footerContent" valign="top" style="padding-top:0; padding-right:0; padding-bottom:20px; padding-left:0; text-align:center;"></td></tr></table></td></tr><tr><td class="footerContent" style="vertical-align: top; text-align: center;padding-bottom:20px;padding-top:0;padding-left:0;padding-right:0;"><div><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9Db3Vyc2VyYT91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9b3RoZXImdXRtX2NhbXBhaWduPW9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy5hbm5vdW5jZW1lbnRzfm9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy4zd0RFOFNaLVRaT2xNeXhNdmZDbzVnIiwidHJhY2tpbmciOnsidXNlcklkIjoxMDUzMjYzNywidXNlckVtYWlsIjoiSWRhdGVXYW5nQGdtYWlsLmNvbSIsIm5vdGlmaWNhdGlvblR5cGUiOiJvcGVuY291cnNlLmFubm91bmNlbWVudHMiLCJjYW1wYWlnbklkIjoib3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LjN3REU4U1otVFpPbE15eE12ZkNvNWciLCJjYW1wYWlnbkdyb3VwIjoib3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LmFubm91bmNlbWVudHMiLCJsaW5rcyI6W119fSwidXNlcklkIjoxMDUzMjYzN30.RtUYLJ3LNjaxa8_09LwcfvFfg2acESQtWemQ_wzCreI" rel="nofollow" style="margin: 0 7px;" target="_blank"><img src="https://dt5zaw6a98blc.cloudfront.net/site-static/images/footer/facebook.png" alt="facebook" width="24" style="border: none; width: 24px; height: 24px; opacity: 0.6;" height="24"/></a><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3R3aXR0ZXIuY29tL2NvdXJzZXJhP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1vdGhlciZ1dG1fY2FtcGFpZ249b3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LmFubm91bmNlbWVudHN-b3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LjN3REU4U1otVFpPbE15eE12ZkNvNWciLCJ0cmFja2luZyI6eyJ1c2VySWQiOjEwNTMyNjM3LCJ1c2VyRW1haWwiOiJJZGF0ZVdhbmdAZ21haWwuY29tIiwibm90aWZpY2F0aW9uVHlwZSI6Im9wZW5jb3Vyc2UuYW5ub3VuY2VtZW50cyIsImNhbXBhaWduSWQiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuM3dERThTWi1UWk9sTXl4TXZmQ281ZyIsImNhbXBhaWduR3JvdXAiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuYW5ub3VuY2VtZW50cyIsImxpbmtzIjpbXX19LCJ1c2VySWQiOjEwNTMyNjM3fQ.5hc0wu7GbDct6l3Jt5k76rNt-kdxZMvQHrTyjDEeESs" rel="nofollow" style="margin: 0 7px;" target="_blank"><img src="https://dt5zaw6a98blc.cloudfront.net/site-static/images/footer/twitter.png" alt="twitter" width="24" style="border: none; width: 24px; height: 24px; opacity: 0.6;" height="24"/></a><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwOi8vYmxvZy5jb3Vyc2VyYS5vcmcvP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1vdGhlciZ1dG1fY2FtcGFpZ249b3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LmFubm91bmNlbWVudHN-b3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LjN3REU4U1otVFpPbE15eE12ZkNvNWciLCJ0cmFja2luZyI6eyJ1c2VySWQiOjEwNTMyNjM3LCJ1c2VyRW1haWwiOiJJZGF0ZVdhbmdAZ21haWwuY29tIiwibm90aWZpY2F0aW9uVHlwZSI6Im9wZW5jb3Vyc2UuYW5ub3VuY2VtZW50cyIsImNhbXBhaWduSWQiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuM3dERThTWi1UWk9sTXl4TXZmQ281ZyIsImNhbXBhaWduR3JvdXAiOiJvcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuYW5ub3VuY2VtZW50cyIsImxpbmtzIjpbXX19LCJ1c2VySWQiOjEwNTMyNjM3fQ.8C5klve6jqUbHsNJpDUY7mHp2jE4WC3QDa5G00fX5vU" rel="nofollow" style="margin: 0 7px;" target="_blank"><img src="https://dt5zaw6a98blc.cloudfront.net/site-static/images/footer/blog.png" alt="blog" width="24" style="border: none; width: 24px; height: 24px; opacity: 0.6;" height="24"/></a><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3BsdXMuZ29vZ2xlLmNvbS8xMTE5NTA1OTQwMzkyNjkyODE0NjkvcG9zdHM_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPW90aGVyJnV0bV9jYW1wYWlnbj1vcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuYW5ub3VuY2VtZW50c35vcGVuY291cnNlLmFRLWl5M1g5RWV1R194TGU0RVdJT3cuM3dERThTWi1UWk9sTXl4TXZmQ281ZyIsInRyYWNraW5nIjp7InVzZXJJZCI6MTA1MzI2MzcsInVzZXJFbWFpbCI6IklkYXRlV2FuZ0BnbWFpbC5jb20iLCJub3RpZmljYXRpb25UeXBlIjoib3BlbmNvdXJzZS5hbm5vdW5jZW1lbnRzIiwiY2FtcGFpZ25JZCI6Im9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy4zd0RFOFNaLVRaT2xNeXhNdmZDbzVnIiwiY2FtcGFpZ25Hcm91cCI6Im9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy5hbm5vdW5jZW1lbnRzIiwibGlua3MiOltdfX0sInVzZXJJZCI6MTA1MzI2Mzd9.mGWbWbK-2JSW_3akOuycyQR_voAN4eGpLdvOuISvzGA" rel="nofollow" style="margin: 0 7px;" target="_blank"><img src="https://dt5zaw6a98blc.cloudfront.net/site-static/images/footer/googleplus.png" alt="blog" width="24" style="border: none; width: 24px; height: 24px; opacity: 0.6;" height="24"/></a></div></td></tr><tr><td class="footerContent" style="color:#808080; font-size:12px; line-height:150%; padding: 0 20px 0 20px; text-align:center;"><div>You are receiving this email because IdateWang@gmail.com is registered to the</div><div>Neural Networks and Random Forests course at Coursera.</div></td></tr><!--Helplink--><tr><td class="footerContent" style="color:#808080; font-size:12px; line-height:150%;padding: 0 20px 20px 20px; text-align:center;"><div>Please do not reply directly to this email. If you have any questions or feedback,</div><div>please visit our <a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL2NvdXJzZXJhaGVscC56ZW5kZXNrLmNvbS9oYz91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9b3RoZXImdXRtX2NhbXBhaWduPW9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy5hbm5vdW5jZW1lbnRzfm9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy4zd0RFOFNaLVRaT2xNeXhNdmZDbzVnIiwidHJhY2tpbmciOnsidXNlcklkIjoxMDUzMjYzNywidXNlckVtYWlsIjoiSWRhdGVXYW5nQGdtYWlsLmNvbSIsIm5vdGlmaWNhdGlvblR5cGUiOiJvcGVuY291cnNlLmFubm91bmNlbWVudHMiLCJjYW1wYWlnbklkIjoib3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LjN3REU4U1otVFpPbE15eE12ZkNvNWciLCJjYW1wYWlnbkdyb3VwIjoib3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LmFubm91bmNlbWVudHMiLCJsaW5rcyI6W119fSwidXNlcklkIjoxMDUzMjYzN30.htkR_cGh2hacWukuOKJc056Au1X3kuvVqiT6_O69vgo" style="color: #606060" target="_blank">support site</a>.</div></td></tr><!--Address--><tr><td class="footerContent" style="color:#808080; font-size:12px; line-height:150%; padding: 0 20px 20px 20px; text-align:center;" valign="top">Copyright (c) 2022 Coursera, Inc&nbsp;|&nbsp;381 E. Evelyn Avenue, Mountain View, CA 94041 USA</td></tr><!--Unsubscribe--><tr><td class="footerContent" valign="top" style="padding:0 20px 20px 20px;text-align:center;"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvYWNjb3VudC91bnN1YnNjcmliZS9za3NsZ3JqYmIxdU8xYXJ1ODRGTEx3RF8zZ0xka0lkSnFwWHhXSDBBbDZNWTY0eDVsOVJwdkRnLUlDSFc1ajBWMTFIOXMxVXNXWlRjZ2RpY2JRcjdaQS4tYkdEVThhZUFDei1KVjVNRGRndnNBLmQ0QVdiTEhYNUZZeHFEMVlEZmNTdHdFMVVPYkFUMHdfZzdacDEzZWpMbVh4dzRBbzc2bHFhSWp6ZXByYy1tenBaWGE5bFRlZXJ2MFVoUkQ5VFpjeVJuQUd3UHpSU3VfNV9aR0NkOFluYm8ybGl2Y05iNmRHdGdmT2JjbzB1cDFzM3U0SjJtNGxKcnFZQk9oVDBHR3k1VlJuWmZIODRFa0ZlN0ZMMkxLWWc0UT91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9b3RoZXImdXRtX2NhbXBhaWduPW9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy5hbm5vdW5jZW1lbnRzfm9wZW5jb3Vyc2UuYVEtaXkzWDlFZXVHX3hMZTRFV0lPdy4zd0RFOFNaLVRaT2xNeXhNdmZDbzVnIiwidHJhY2tpbmciOnsidXNlcklkIjoxMDUzMjYzNywidXNlckVtYWlsIjoiSWRhdGVXYW5nQGdtYWlsLmNvbSIsIm5vdGlmaWNhdGlvblR5cGUiOiJvcGVuY291cnNlLmFubm91bmNlbWVudHMiLCJjYW1wYWlnbklkIjoib3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LjN3REU4U1otVFpPbE15eE12ZkNvNWciLCJjYW1wYWlnbkdyb3VwIjoib3BlbmNvdXJzZS5hUS1peTNYOUVldUdfeExlNEVXSU93LmFubm91bmNlbWVudHMiLCJsaW5rcyI6W119fSwidXNlcklkIjoxMDUzMjYzN30.eSHqtJPGw0zLx0e4MO-gG59OTT1HBj__jlUAQ82Lkes" style="font-size:12px;line-height:150%;font-weight:bold;color: #606060"> unsubscribe from this list</a></td></tr></table></td></tr></table></td></tr></table></center><img src="https://eventing.coursera.org/img/x0H_s1QCBW0e78M5-A2thsom9CYJ10gdG3djtwW_3_zFYnkPzRWSOQVhmz26Npsf7W9SB1VsMpxUD0Fygt-ZjQ.MxgQULLSZItvqXZXfUFTgg.lIJIEutdvrq0AngXyxTj-c54OvpdZMu5JP9--3u7BegYd92EUBlQUWh6wvDt7tuXFVdvkjJkjJy_tVqaBNhhSvZw7fYu75mial3zcBBNu1LS5EFE06rC0BsyUgfM9VNxDDRRSag-58CAl57ScSt0rN0dgBRU04JqU_xB9viQ_YLe_ZtZ4uBYxp73aB3fVXoklSaMs6vAvbUAV6CEeD62HX5nYEjp4xYB4OIIvGwHmEC_GMVoZO5Nbr4oDgTem8o7wIEFYU6S7EpJc1pZsT4xOtZejdjC-1lpydrvc6aLqLDkWrpMXFvL9lU_EAcjf2JTlLureWpZ-381aRUCPTcuxHZVipZfxsWvOC2oRksfwYI7tb9ZgYOyBM_MvQd5QUV4t_zW8z_8klcOBTczOFRXuOuOgxr1RauxEXYHAambNS0" border="0" width="1" height="1">
+<img border="0" width="1" height="1" alt="" src="http://click.mail.coursera.org/q/39_FcmzeVnZJtx58HD7MzQ~~/AAAAAQA~/RgRlKVslPlcIY291cnNlcmFCCmNFJdZGY8LCcz1SE0lkYXRlV2FuZ0BnbWFpbC5jb21YBAAAAAA~">
+</body></html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xml:lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" /> <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width" /> <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting" /> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+  <!-- Tell iOS not to automatically link certain text strings. -->
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
+  <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+  <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+  <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+  <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+  <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+  <!-- CSS Reset : BEGIN -->
+  <style>
+    /* What it does: Tells the email client that only light styles are provided but the client can transform them to dark. A duplicate of meta color-scheme meta tag above. */
+    :root {
+      color-scheme: light;
+      supported-color-schemes: light;
+    }
+
+    /* What it does: Remove spaces around the email design added by some email clients. */
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+    html,
+    body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    /* What it does: Stops email clients resizing small text. */
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* What it does: Centers email on Android 4.4 */
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    /* What it does: forces Samsung Android mail clients to use the entire viewport */
+    #MessageViewBody,
+    #MessageWebViewDiv {
+      width: 100% !important;
+    }
+
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    sup {
+      line-height: 0;
+      font-size: 75%;
+    }
+
+    /* What it does: Replaces default bold style. */
+    th {
+      font-weight: normal;
+      padding: 0;
+      border-collapse: collapse;
+    }
+
+    /* What it does: Fixes webkit padding issue. */
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+    a {
+      text-decoration: none;
+    }
+
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* What it does: A work-around for email clients meddling in triggered links. */
+    a[x-apple-data-detectors],
+    /* iOS */
+    .unstyle-auto-detected-links a,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+    .im {
+      color: inherit !important;
+    }
+
+    /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+
+    /* If the above doesn't work, add a .g-img class to any image in question. */
+    img.g-img+div {
+      display: none !important;
+    }
+
+    .nodesktop {
+      display: none !important;
+    }
+
+
+    /* small mob screen class only */
+    @media screen and (max-width: 374px) {
+      u~div .email-container {
+        width: 100% !important;
+      }
+
+      .textcenter {
+        text-align: center !important;
+      }
+
+    }
+  </style>
+  <!-- CSS Reset : END -->
+
+  <!-- Progressive Enhancements : BEGIN -->
+  <style>
+    /* Media Queries */
+    @media screen and (max-device-width: 600px),
+    screen and (max-width:600px) {
+      .mobilecontent {
+        display: block !important;
+        max-height: none !important;
+      }
+
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      .stack-column-center {
+        text-align: center !important;
+      }
+
+      u~div .wrapper {
+        min-width: 100vw;
+      }
+
+      .wrapper {
+        max-width: 100% !important;
+      }
+
+      .email-container {
+        width: 100% !important;
+        margin: auto !important;
+      }
+
+      .wrapto100pc {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+
+      .textleft {
+        text-align: left !important;
+      }
+
+      .textright {
+        text-align: right !important;
+      }
+
+      .textcenter {
+        text-align: center !important;
+      }
+
+      /*mob padding*/
+      .l20 {
+        padding-left: 20px !important;
+      }
+
+      .r20 {
+        padding-right: 20px !important;
+      }
+
+      .l10 {
+        padding-left: 10px !important;
+      }
+
+
+      .lr0 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+      }
+
+      .b16 {
+        padding-bottom: 16px !important;
+      }
+
+      .b20 {
+        padding-bottom: 20px !important;
+      }
+
+      .tb16sides20 {
+        padding: 16px 20px !important;
+      }
+
+      .tb16sides0 {
+        padding: 16px 0px !important;
+      }
+
+      .t20sides0 {
+        padding: 20px 0px 0px !important;
+      }
+
+      .pt35sides0 {
+        padding: 35px 0px !important;
+      }
+
+      .stackholder {
+        display: table;
+        width: 100%;
+      }
+
+      .stacktop {
+        display: table-header-group !important;
+      }
+
+      .stackbottom {
+        display: table-footer-group !important;
+      }
+
+      .nomob {
+        display: none !important;
+      }
+
+      .showmob {
+        display: block !important;
+      }
+
+    }
+  </style>
+
+  <style type="text/css">@media screen and (max-device-width: 600px), screen and (max-width:600px) {.mobh1FontSize { font-size: 30px !important;}.mobh1LineHeight { line-height: 38px !important;}.mobh2FontSize { font-size: 22px !important;}.mobh2LineHeight { line-height: 30px !important;}.mobh4FontSize { font-size: 12px !important;}.mobh4LineHeight { line-height: 14px !important;}.mobBodyStandardFontSize { font-size: 16px !important;}.mobBodyStandardLineHeight { line-height: 20px !important;} }</style>
+
+
+  <!-- Progressive Enhancements : END -->
+  <style>
+    @media {
+
+      /*ENSURE FONTS ARE HTTPS: OTHERWISE WILL NOT WORK */
+      @font-face {
+        font-family: 'Cashmarket';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://images.emlcdn.net/cdn/143/QH88a143b8/cashmarketregularrounded.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Cashmarket';
+        font-style: normal;
+        font-weight: 600;
+        src: url(https://images.emlcdn.net/cdn/143/QH88a143b8/cashmarketboldrounded.woff) format('woff');
+      }
+
+
+      @font-face {
+        font-family: 'AgrandirGrand';
+        font-style: normal;
+        font-weight: 600;
+        src: url(https://images.emlcdn.net/cdn/143/QH88a143b8/agrandirgrandheavy.woff) format('woff');
+      }
+
+
+    }
+  </style>
+</head>
+<!--
+  The email background color (#222222) is defined in three places:
+  1. body tag: for most email clients
+  2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+  3. mso conditional: For Windows 10 Mail
+-->
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #fffffe">
+  <center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #fffffe" xml:lang="en">
+    
+      <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #fefefe;">
+    <tr>
+    <td>
+    <![endif]-->
+    
+    <!-- Visually Hidden Preheader Text : BEGIN -->
+    
+      <!--[if !mso]><!-->
+      <div style="display: none; max-height: 0px; overflow: hidden;mso-hide:all;">
+        <!-- Preheader -->
+        
+          Save on everyday purchases
+        </div>
+      <!-- Preview Text Spacing Hack : BEGIN -->
+      <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      </div>
+      <!-- Preview Text Spacing Hack : END -->
+      <!--<![endif]-->
+    <!--START HEADER MODULEZONE-->
+    
+        <table align="center" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" style="width: 640px;" class="wrapto100pc" bgcolor="#fffffe">
+          <tr>
+            <td valign="top" align="center" style="padding: 30px;" class="l20 r20">
+              
+                <a href="https://cash.app/" target="_blank">
+                  <img src="https://cash-f.squarecdn.com/static/Cash-App-Green-Logo.png" width="133" align="center" alt="cashapp logo" border="0" style="display:block; height: auto; font-family: Arial, sans-serif; font-size: 16px; line-height: 16px; color: #009fda;" class="wrapto60pc" />
+                </a>
+              </td>
+          </tr>
+        </table>
+      <!--START BODY MODULEZONE-->
+    
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px; margin: auto;" class="email-container">
+          <tr>
+            <td valign="top" align="center" class="l20 r20" bgcolor="#fffffe" style="padding:0px 20px 10px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <tr>
+                  <td valign="top" align="center">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td valign="top" align="center" class="mobh1FontSize mobh1LineHeight" style="font-family: 'AgrandirGrand', Helvetica Neue, sans-serif; font-size:30px; line-height:38px; font-weight: 600;">
+                          <span style="color:#000000;">
+                            The instant discounts debit card
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      
+        
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px; margin: auto;" class="email-container" bgcolor="#fffffe">
+          <tr>
+            <td valign="top" align="center" class="l20 r20" bgcolor="#fffffe">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <tr>
+                  <td valign="top" align="center">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
+                      <tr>
+                        <td valign="top" align="center" style="padding: 0px 0px 0px 0px;">
+                          <div>
+                            <a href="https://click.cash.app/ui6m/2y4kguon" target="_blank">
+                              <img src="https://cash-f.squarecdn.com/static/Day10_Email_V2.png" width="600" height="auto" style="display: block;width:600px;height:auto;padding: 20px 20px 0px 20px" border="0" class="wrapto100pc t20sides0" role="none" alt="Order your Cash Card" /></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top" align="center" style="padding: 15px 20px 0px 20px;" class="t20sides0">
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                            <tr>
+                              <td valign="top" align="center">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                                  <tr>
+                                    <td valign="top" align="left" class="mobh1FontSize mobh1LineHeight" style="font-family: 'AgrandirGrand', Helvetica Neue, sans-serif; font-size:30px; font-weight: 600;padding-bottom:0px;">
+                                      <span style="line-height:38px; color:#000000;">
+                                        <a href="https://cash.app/" target="blank" style="text-decoration:none; color:#000000;">
+                                          
+                                        </a>
+                                      </span>
+                                    </td>
+                                  </tr>
+                                  
+                                  
+                                  
+                                  
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="24" style="height: 24px; font-size: 24px; line-height: 24px;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px; margin: auto;" class="email-container">
+          <tr>
+            <td valign="top" align="center" class="l20 r20" bgcolor="#fffffe" style="padding:0px 20px 10px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <tr>
+                  <td valign="top" align="center">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td valign="top" align="left" class="mobBodyStandardFontSize mobBodyStandardLineHeight" style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:16px; line-height:20px; font-weight: 400;">
+                          <span style="color:#767676;">
+                            Cash Card is the customizable, no hidden fee, instant discounts debit card<strong style="">.<br /><br /></strong>
+                          </span>
+                        </td>
+                      </tr>
+                      
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px; margin: auto;" class="email-container">
+          <tr>
+            <td valign="top" align="center" class="l20 r20" bgcolor="#fffffe" style="padding:0px 20px 10px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <tr>
+                        <td valign="top" align="left" class="mobh2FontSize mobh2LineHeight" style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:22px; line-height:30px; font-weight: 600;">
+                          <span style="color:#000000;">
+                            <strong style="">Instant discounts</strong>
+                          </span>
+                        </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px; margin: auto;" class="email-container">
+          <tr>
+            <td valign="top" align="center" class="l20 r20" bgcolor="#fffffe" style="padding:0px 20px 10px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <tr>
+                  <td valign="top" align="center">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td valign="top" align="left" class="mobBodyStandardFontSize mobBodyStandardLineHeight" style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:16px; line-height:20px; font-weight: 400;">
+                          <span style="color:#767676;">
+                            Add Boosts to Cash Card and get instant discounts on coffee, take-out, groceries, and more.<br /><br />
+                          </span>
+                        </td>
+                      </tr>
+                      
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px; margin: auto;" class="email-container">
+          <tr>
+            <td valign="top" align="center" class="l20 r20" bgcolor="#fffffe" style="padding:0px 20px 10px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <tr>
+                        <td valign="top" align="left" class="mobh2FontSize mobh2LineHeight" style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:22px; line-height:30px; font-weight: 600;">
+                          <span style="color:#000000;">
+                            Personalized savings
+                          </span>
+                        </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px; margin: auto;" class="email-container">
+          <tr>
+            <td valign="top" align="center" class="l20 r20" bgcolor="#fffffe" style="padding:0px 20px 10px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <tr>
+                  <td valign="top" align="center">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td valign="top" align="left" class="mobBodyStandardFontSize mobBodyStandardLineHeight" style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:16px; line-height:20px; font-weight: 400;">
+                          <span style="color:#767676;">
+                            Boosts can save you up to 20% at the places you love. They&#x2019;re personalized just for you, and there&#x2019;s no collecting points or waiting for rewards&#x2014;just instant savings.<br /><br />
+                          </span>
+                        </td>
+                      </tr>
+                      
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      
+        
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px; margin: auto;" class="email-container">
+          <tr>
+            <td valign="top" align="center" style="padding: 0px" bgcolor="#fffffe">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <tr>
+                  <td valign="middle" align="left" style="vertical-align: middle; padding: 10px 20px 0px 20px;">
+                    <table align="center" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td valign="top" align="center" style="font-family: 'AgrandirGrand', Helvetica Neue, sans-serif; font-size: 16px; font-weight: 700;">
+<a href="https://click.cash.app/ui6m/2y4kguon" target="_blank" style="background-color:#00d54b; text-align: center; padding: 14px 40px; color:#000000; border-radius: 30px; border: solid 1px #000000; display:inline-block; mso-padding-alt: 0;">
+                            
+                              <!--[if mso]><i style="letter-spacing:40px;mso-font-width:-100%;mso-text-raise:28px">&nbsp;</i><![endif]-->
+                            <span style="mso-text-raise:14px">
+                              Order your Cash Card
+                            </span>
+                            
+                              <!--[if mso]><i style="letter-spacing: 40px;mso-font-width:-100%">&nbsp;</i><![endif]-->
+                            
+                          </a>
+                        </td>
+                        
+                      </tr>
+                      
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="24" style="height: 24px; font-size: 24px; line-height: 24px;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" class="email-container" style="width:640px; margin: auto; border: solid 1px #fffffe;">
+        <tr>
+          <td valign="top" align="center" style="padding:0px 20px 10px;" class="l20 r20" bgcolor="#fffffe">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+              <tr>
+                <td valign="top" align="left" style="padding: 30px 0px 0px 0px;" bgcolor="#fffffe">
+                    <a href="https://cash.app/" target="_blank">
+                      <img src="https://cash-f.squarecdn.com/static/ca-email_logo.png" width="180" alt="Cashapp logo" border="0" style="display:block; height: auto; width:180px;" class="wrapto100pc" />
+                    </a>
+                </td>
+                <td valign="bottom" align="right" style="padding: 35px 0px 10px 10px;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" class="wrapto100pc">
+                    <tr>
+                      <td align="right" valign="middle">
+                        
+                          <span class="nomob">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a href="https://www.twitch.tv/cashapp"><img src="https://cash-f.squarecdn.com/static/twitch_email.png" height="20" width="20" alt="Twitch social icon" class="l10" /></a>
+                      
+
+                      
+                        <span class="nomob">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a href="https://twitter.com/cashapp"><img src="https://cash-f.squarecdn.com/static/twitter_email.png" height="20" width="20" alt="Twitter social icon" class="l10" /></a>
+                          
+
+                        
+                          <span class="nomob">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a href="https://www.instagram.com/cashapp/"><img src="https://cash-f.squarecdn.com/static/ig_email.png" height="20" width="20" alt="Instagram social icon" class="l10" /></a>
+                      
+
+                        
+                          <span class="nomob">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <a href="https://www.tiktok.com/@cashapp"><img src="https://cash-f.squarecdn.com/static/tiktok_email.png" height="20" width="20" alt="Tiktok social icon" class="l10" /></a>
+                          
+                            </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top" align="center" style="padding:20px 20px 10px;" class="l20 r20" bgcolor="#fffffe">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <td valign="top" align="left" class="wrapto100pc" style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:8px; line-height:10px; font-weight: 400; mso-text-raise:2px; mso-line-height-rule: exactly; color:#000000; padding-bottom:10px;">
+                    This is a promotional email from Cash App. 1455 Market Street Suite 600 San Francisco, CA 94103. <br /><br />Cash App is a financial platform, not a bank. Banking services provided and debit cards issued by Cash App bank partner(s).
+                </td>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" align="center" style="padding:0px 20px 0px;" class="l20 r20" bgcolor="#fffffe">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe">
+                <td valign="top" align="left" class="wrapto100pc" style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:8px; line-height:10px; font-weight: 400; mso-text-raise:2px; mso-line-height-rule: exactly; color:#000000; padding-bottom:10px;">
+                    
+                </td>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top" align="center" style="padding:0px 20px 30px;" class="l20 r20" bgcolor="#fffffe">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" bgcolor="#fffffe" class="wrapto100pc">
+              <tr>
+                          <th valign="top" align="left" class="stack-column stack-column-center" style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:14px; line-height:16px; font-weight: 600; color:#000000;padding-top: 10px;">
+                            © 2022 
+                        </th>
+                          <th valign="middle" align="right" width="350" style="width:350px;" class="stack-column stack-column-center">
+                              <p style="font-family: 'Cashmarket', Helvetica Neue, sans-serif; font-size:11px; line-height:14px; font-weight: 400; color:#000000;"><a href="https://cash.app/legal/us/en-us/privacy" style="text-decoration: none; color:#000000;"><strong>Privacy Policy</strong></a> 
+
+                               &nbsp;&nbsp;|&nbsp;&nbsp;
+                                 
+                                <a ses:tags="subscription:direct_unsub;" href="https://squareup.com/email/subscriptions/unsubscribe?scope=cash_marketing&subcategory=cash_marketing&locale=&request_id=112_124c3449-e907-4847-ab54-ed01a0a3101d&recipient=CHUQjY79taH8ifCVARijr%2Fq13r%2BihbQB" style="text-decoration: none; color:#000000;"><strong>Unsubscribe</strong></a>
+                                  
+                                  
+                              
+                                
+                                 &nbsp;&nbsp;|&nbsp;&nbsp;
+                                   
+                                  <a ses:tags="subscription:manage_prefs" href="https://squareup.com/email/subscriptions/manage?locale=&request_id=112_124c3449-e907-4847-ab54-ed01a0a3101d&recipient=CHUQjY79taH8ifCVARijr%2Fq13r%2BihbQB&type=cash" style="text-decoration: none; color:#000000;"><strong>Manage&nbsp;Preferences</strong></a>
+                                  
+                                  
+                                
+                                </p>
+                          </th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+    
+      <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    
+  </center>
+  
+<img alt="" src="https://pfx6lsrm.r.us-west-2.awstrack.me/I0/010101833296fc50-93bb8429-8e15-40ba-af19-7e80d1c770d2-000000/e3qg5uE-m4Q0j5ihQpb7eRjouW8=287" style="display: none; width: 1px; height: 1px;">
+</body>
+
+</html>
